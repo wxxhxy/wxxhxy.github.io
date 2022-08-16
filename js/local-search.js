@@ -157,4 +157,5 @@
   modal.on('hidden.bs.modal', function() {
     localSearchReset(searchSelector, resultSelector);
   });
+
 })();
