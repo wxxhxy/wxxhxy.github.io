@@ -23,14 +23,13 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="第一章、linux 的介绍和安装1.1  linux 操作系统介绍linux 的创始人 Linus torvalds。linux 与 GNU 和 minix linux 与 windows linux 与 unix（POSIX 标准） linux 的版本号 linux 的优点 1.2  linux 操作系统的安装1.2.1 linux 的常见发行版本redhat：advanced standard">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://47.108.137.21/2022/08/17/linux%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/clip_image002.jpg">
-<meta property="og:image" content="file:///C:/Users/青花瓷/AppData/Local/Temp/msohtmlclip1/01/clip_image004.jpg">
+<meta property="og:image" content="http://47.108.137.21/img/wallhaven-v9w5z5.jpg">
 <meta property="article:published_time" content="2022-08-16T16:55:56.000Z">
-<meta property="article:modified_time" content="2022-08-16T17:09:16.962Z">
+<meta property="article:modified_time" content="2022-08-18T09:20:25.219Z">
 <meta property="article:author" content="冬至">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://47.108.137.21/2022/08/17/linux%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/clip_image002.jpg">
+<meta name="twitter:image" content="http://47.108.137.21/img/wallhaven-v9w5z5.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -340,7 +339,7 @@
               <p class="note note-primary">
                 
                   
-                    本文最后更新于：20 小时前
+                    本文最后更新于：1 分钟前
                   
                 
               </p>
@@ -366,15 +365,18 @@
 <p>第二列 localhost 代表主机名</p>
 <p>第三列~代表当前所在的目录 ~家目录 home 目录</p>
 <p>linux 的命令可以补全 可以不全目录和文件名，如果不能补全双击 tab 键可以显示出要选择的命令</p>
-<p>1.3.2 linux 的登陆与登出login 登入系统</p>
+<h3 id="1-3-2-linux-的登陆与登出"><a href="#1-3-2-linux-的登陆与登出" class="headerlink" title="1.3.2 linux 的登陆与登出"></a>1.3.2 linux 的登陆与登出</h3><p>login 登入系统</p>
 <p>logout  登出系统exit 注销当前用户clear 清屏命令</p>
-<p>1.3.3 linux 的关机shutdown     关机命令</p>
+<h3 id="1-3-3-linux-的关机"><a href="#1-3-3-linux-的关机" class="headerlink" title="1.3.3 linux 的关机"></a>1.3.3 linux 的关机</h3><p>shutdown     关机命令</p>
 <p>shutdown now   立即进入维护模式halt    直接关机</p>
 <p>shutdown -h now  立即关机</p>
-<p>shutdown -r now  立即重新启动计算机shutdown -h 20:00&amp;  20:00 关闭计算机shutdown -r 20:00&amp;   20:00 重新启动计算机</p>
-<p>shutdown -k 3 warning:system will shutdown!  只是发送消息给所以用户 3 分钟后进入维护模式shutdown +3 “system will shutdown after 3 minutes!”  发送消息给所以用户 3 分钟后进入系统维护模式</p>
-<p>1.3.4 linux 的 Init 进程</p>
-<p>Init 是 Linux 操作系统中不可缺少的程序之一。init 进程是 Linux 内核引导运行的，是系统中的第一个进程，其进程号（PID）永远为 1。</p>
+<p>shutdown -r now  立即重新启动计算机</p>
+<p>shutdown -h 20:00&amp;  20:00 关闭计算机</p>
+<p>shutdown -r 20:00&amp;   20:00 重新启动计算机</p>
+<p>shutdown -k 3 warning:system will shutdown!  只是发送消息给所以用户 3 分钟后进入维护模式</p>
+<p>shutdown +3 “system will shutdown after 3 minutes!”  发送消息给所以用户 3 分钟后进入系统维护模式</p>
+<h3 id="1-3-4-linux-的-Init-进程"><a href="#1-3-4-linux-的-Init-进程" class="headerlink" title="1.3.4 linux 的 Init 进程"></a>1.3.4 linux 的 Init 进程</h3><p>Init 是 Linux 操作系统中不可缺少的程序之一。</p>
+<p>init 进程是 Linux 内核引导运行的，是系统中的第一个进程，其进程号（PID）永远为 1。</p>
 <p>#0  停机(千万不能把 initdefault 设置为 0)</p>
 <p>#1  单用户模式</p>
 <p>#2  多用户，没有 NFS(和级别 3 相似，会停止部分服务)</p>
@@ -382,8 +384,9 @@
 <p>#4  没有用到</p>
 <p>#5  x11(Xwindow)</p>
 <p>#6  重新启动(千万不要把 initdefault 设置为 6)</p>
-<p>1.3.5 查看 linux 系统信息hostname     显示主机名</p>
-<p>hostname eduask 修改主机名为 eduask uname 显示系统及版本信息</p>
+<h3 id="1-3-5-查看-linux-系统信息"><a href="#1-3-5-查看-linux-系统信息" class="headerlink" title="1.3.5 查看 linux 系统信息"></a>1.3.5 查看 linux 系统信息</h3><p>hostname     显示主机名</p>
+<p>hostname eduask 修改主机名为</p>
+<p> eduask uname 显示系统及版本信息</p>
 <p>-a  显示系统及版本的所有信息</p>
 <p>-s  显示内核名称</p>
 <p>-n  显示网络节点名称（完整的计算机名称）</p>
@@ -396,8 +399,7 @@
 <p>1.3.6 linux 下查看用户信息whoami 显示当前用户</p>
 <p>who   当前系统所登陆的用户，以及所登录的控制台</p>
 <p>w      当前系统所登陆的用户，以及所登录的控制台的详细信息</p>
-<p>第二章、linux 的常用命令</p>
-<p>2.1.1 改变目录 cd</p>
+<h1 id="第二章、linux-的常用命令"><a href="#第二章、linux-的常用命令" class="headerlink" title="第二章、linux 的常用命令"></a>第二章、linux 的常用命令</h1><h3 id="2-1-1-改变目录"><a href="#2-1-1-改变目录" class="headerlink" title="2.1.1 改变目录"></a>2.1.1 改变目录</h3><p>cd</p>
 <p>目录的表达方法</p>
 <p>/根目录</p>
 <p>.当前目录</p>
@@ -406,61 +408,57 @@
 <p>#cd /   进入到系统根目录#cd . 进入当前目录</p>
 <p>#cd ..  进入当前目录的父目录，返回上层目录#cd /tmp 进入指定目录/tmp</p>
 <p>#cd ~  进入当前用户的家目录#cd   进入当前用户的家目录#cd - 回到刚才所在的目录</p>
-<p>2.1.2 显示当前所在目录 pwd</p>
-<p>pwd   显示当前所在目录的路径</p>
-<p>2.1.3 显示文件或目录的属性 ls （dir） #dir 显示当前目录的内容（无颜色） #ls  显示当前目录的内容(有颜色) #ls /tmp 显示指定目录/tmp 的内容</p>
-<p>#ls -l   列出文件和文件夹的基本属性和详细信息#ll 列出文件和文件夹的基本属性和详细信息</p>
-<p>#ls -a   列出当前目录的全部内容，包括隐藏文件（在文件和文件夹前面加“.”隐藏） #ls -l -a 列出当前目录的全部文件和文件夹的基本属性和详细信息</p>
-<p>#ls -la  列出当前目录的全部文件和文件夹的基本属性和详细信息#ll -a 列出当前目录的全部文件和文件夹的基本属性和详细信息</p>
-<p>#ls -A   列出当前目录的全部内容，包括隐藏文件，不显示“.”和“..” #ls —help 列出 ls 命令的帮助内容</p>
-<p>#ls a2*  列出以 a2 开头的文件和文件夹</p>
-<p>#ls -l a2* 列出以 a2 开头的文件和文件夹的基本属性和详细信息</p>
+<h3 id="2-1-2-显示当前所在目录-pwd"><a href="#2-1-2-显示当前所在目录-pwd" class="headerlink" title="2.1.2 显示当前所在目录 pwd"></a>2.1.2 显示当前所在目录 pwd</h3><p>pwd   显示当前所在目录的路径</p>
+<h3 id="2-1-3-显示文件或目录的属性"><a href="#2-1-3-显示文件或目录的属性" class="headerlink" title="2.1.3 显示文件或目录的属性"></a>2.1.3 显示文件或目录的属性</h3><p> ls （dir）</p>
+<p> dir 显示当前目录的内容（无颜色） </p>
+<p>ls  显示当前目录的内容(有颜色) </p>
+<p>ls /tmp 显示指定目录/tmp 的内容</p>
+<p>ls -l   列出文件和文件夹的基本属性和详细信息</p>
+<p>ll 列出文件和文件夹的基本属性和详细信息</p>
+<p>\ls -a   列出当前目录的全部内容，包括隐藏文件（在文件和文件夹前面加“.”隐藏）</p>
+<p> ls -l -a 列出当前目录的全部文件和文件夹的基本属性和详细信息</p>
+<p>\ls -la  列出当前目录的全部文件和文件夹的基本属性和详细信息</p>
+<p>ll -a 列出当前目录的全部文件和文件夹的基本属性和详细信息</p>
+<p>s -A   列出当前目录的全部内容，包括隐藏文件，不显示“.”和“..” </p>
+<p>ls —help 列出 ls 命令的帮助内容</p>
+<p>ls a2*  列出以 a2 开头的文件和文件夹</p>
+<p>ls -l a2* 列出以 a2 开头的文件和文件夹的基本属性和详细信息</p>
 <p>文件和文件夹（蓝色代表目录， 白色代表文件，黄色代表设备文件，红色代表压缩文件，绿色代表可执行文件，浅蓝色代表链接文件）linux 是以属性来控制文件是否能执行。</p>
-<p>2.1.4 创建目录 mkdir</p>
-<p>mkdir dir1     在当前目录下创建 dir 子目录mkdir /tmp/dir2   在指定目录/tmp 下创建 dir2 子目录</p>
-<p>mkdir -p dir3/dir4  在当前目录下创建 2 级目录 dir3 和其子目录 dir4 mkdir -p /dir5/dir6 在根目录下创建 2 级目录 dir5 和其子目录 dir6</p>
+<h3 id="2-1-4-创建目录-mkdir"><a href="#2-1-4-创建目录-mkdir" class="headerlink" title="2.1.4 创建目录 mkdir"></a>2.1.4 创建目录 mkdir</h3><p>mkdir dir1     在当前目录下创建 dir 子目录mkdir /tmp/dir2   在指定目录/tmp 下创建 dir2 子目录</p>
+<p>mkdir -p dir3/dir4  在当前目录下创建 2 级目录 dir3 和其子目录 dir4 </p>
+<p>mkdir -p /dir5/dir6 在根目录下创建 2 级目录 dir5 和其子目录 dir6</p>
 <p>mkdir dir7 dir8 dir9 在当前目录下创建 3 个目录 dir7 dir8 dir9，以空格隔开</p>
-<p>2.1.5 创建空文本文件 touch</p>
-<p>#touch file1   在当前目录下创建 file1 文件#touch /tmp/file2 在指定目录/tmp 下创建 file2 文件</p>
-<p>2.1.6 复制文件命令 cp</p>
-<p>#cp file2 /tmp      复制 file2 文件到/tmp 目录下</p>
-<p>#cp /tmp/file2 /home   复制/tmp/file2 文件到/home 目录下</p>
-<p>#cp /home/file2 /tmp/file3 复制/home/file2 到/tmp 目录下并改名为 file3 #cp -p /tmp/file3 /home 复制/tmp/file3 到/home 目录下并复制文件属性#cp -r /dir5 /tmp 复制/dir5 目录到/tmp 下</p>
-<p>2.1.7 移动文件或目录命令 mv</p>
-<p>#mv file4 /tmp      移动 file4 文件到/tmp 目录下</p>
-<p>#mv /home/file3 /tmp   移动/home/file3 文件到/tmp 目录下</p>
-<p>#mv /home/file3 /tmp/file5 移动/home/file3 文件到/tmp 目录下并改名为 file5 #mv file3 file4   将 file3 改名为 file4</p>
-<p>#mv dir10 /tmp      移动目录到/tmp 下</p>
-<p>#mv dir10 dir11      讲 dir10 目录改名为 dir11</p>
-<p>2.1.8 删除文件命令 rm</p>
-<p>#rm file1         删除文件 file1</p>
+<h3 id="2-1-5-创建空文本文件-touch"><a href="#2-1-5-创建空文本文件-touch" class="headerlink" title="2.1.5 创建空文本文件 touch"></a>2.1.5 创建空文本文件 touch</h3><p>touch file1   在当前目录下创建 file1 文件</p>
+<p>touch /tmp/file2 在指定目录/tmp 下创建 file2 文件</p>
+<h3 id="2-1-6-复制文件命令-cp"><a href="#2-1-6-复制文件命令-cp" class="headerlink" title="2.1.6 复制文件命令 cp"></a>2.1.6 复制文件命令 cp</h3><p>cp file2 /tmp      复制 file2 文件到/tmp 目录下</p>
+<p>cp /tmp/file2 /home   复制/tmp/file2 文件到/home 目录下</p>
+<p>cp /home/file2 /tmp/file3 复制/home/file2 到/tmp 目录下并改名为 file3 #cp -p /tmp/file3 /home 复制/tmp/file3 到/home 目录下并复制文件属性#cp -r /dir5 /tmp 复制/dir5 目录到/tmp 下</p>
+<h3 id="2-1-7-移动文件或目录命令-mv"><a href="#2-1-7-移动文件或目录命令-mv" class="headerlink" title="2.1.7 移动文件或目录命令 mv"></a>2.1.7 移动文件或目录命令 mv</h3><p>mv file4 /tmp      移动 file4 文件到/tmp 目录下</p>
+<p>mv /home/file3 /tmp   移动/home/file3 文件到/tmp 目录下</p>
+<p>mv /home/file3 /tmp/file5 移动/home/file3 文件到/tmp 目录下并改名为 file5 #mv file3 file4   将 file3 改名为 file4</p>
+<p>mv dir10 /tmp      移动目录到/tmp 下</p>
+<p>mv dir10 dir11      讲 dir10 目录改名为 dir11</p>
+<h3 id="2-1-8-删除文件命令-rm"><a href="#2-1-8-删除文件命令-rm" class="headerlink" title="2.1.8 删除文件命令 rm"></a>2.1.8 删除文件命令 rm</h3><p>#rm file1         删除文件 file1</p>
 <p>#rm -f file1       不用确认直接删除 file1 #rm -f file1 file2 file3 不用确认同时删除多个文件</p>
 <p>#rm /tmp/file1      删除指定目录/tmp 下的文件 file1</p>
 <p>#rm fi*          删除以 fi 开头的文件</p>
 <p>#rmdir          删除空目录</p>
 <p>#rm -r dir        递归的方式删除非空目录 dir</p>
 <p>#rm -rf dir        不用确认直接删除非空目录 dir</p>
-<p>2.1.9 查看文件内容命令 cat</p>
-<p>#cat /etc/passwd   查看/etc/passwd 文件#cat /etc/passwd |more 分屏查看文件内容</p>
+<h3 id="2-1-9-查看文件内容命令-cat"><a href="#2-1-9-查看文件内容命令-cat" class="headerlink" title="2.1.9 查看文件内容命令 cat"></a>2.1.9 查看文件内容命令 cat</h3><p>#cat /etc/passwd   查看/etc/passwd 文件#cat /etc/passwd |more 分屏查看文件内容</p>
 <p>#cat /etc/passwd |less 分屏查看文件内容，可以上下翻页，“q”退出</p>
-<p>2.1.10 查找文件命令 find</p>
-<p>#find pass<em>       在当前目录下查找以 pass 开头的文件#find /etc/pass</em>  在/etc 目录中查找以 pass 开头的文件</p>
+<h3 id="2-1-10-查找文件命令-find"><a href="#2-1-10-查找文件命令-find" class="headerlink" title="2.1.10 查找文件命令 find"></a>2.1.10 查找文件命令 find</h3><p>#find pass<em>       在当前目录下查找以 pass 开头的文件#find /etc/pass</em>  在/etc 目录中查找以 pass 开头的文件</p>
 <p>#find /etc/pass* -print 在/etc 目录中查找以 pass 开头的文件，并显示出来</p>
-<p>2.1.11 在文件内容中查找关键字 grep</p>
-<p>#grep “rpm” /etc/passwd 在/etc/passwd 文件中查找关键字 rpm</p>
-<p>2.2 vi 文本编辑器</p>
-<p>2.2.1 vi 的两种模式</p>
-<p>1、命令模式 vi 的默认进入状态（不可以输入字符，但可以对字符进行操作，复制，移动、删除等操作）</p>
+<h3 id="2-1-11-在文件内容中查找关键字-grep"><a href="#2-1-11-在文件内容中查找关键字-grep" class="headerlink" title="2.1.11 在文件内容中查找关键字 grep"></a>2.1.11 在文件内容中查找关键字 grep</h3><p>#grep “rpm” /etc/passwd 在/etc/passwd 文件中查找关键字 rpm</p>
+<h2 id="2-2-vi-文本编辑器"><a href="#2-2-vi-文本编辑器" class="headerlink" title="2.2 vi 文本编辑器"></a>2.2 vi 文本编辑器</h2><h3 id="2-2-1-vi-的两种模式"><a href="#2-2-1-vi-的两种模式" class="headerlink" title="2.2.1 vi 的两种模式"></a>2.2.1 vi 的两种模式</h3><p>1、命令模式 vi 的默认进入状态（不可以输入字符，但可以对字符进行操作，复制，移动、删除等操作）</p>
 <p>2、输入模式 输入字符状态（只可以输入和使用 del 和退格 backspace 键删除文字）</p>
-<p>2.2.2 vi 的启动和退出</p>
-<p>#vi file    编辑 file 文件</p>
+<h3 id="2-2-2-vi-的启动和退出"><a href="#2-2-2-vi-的启动和退出" class="headerlink" title="2.2.2 vi 的启动和退出"></a>2.2.2 vi 的启动和退出</h3><p>#vi file    编辑 file 文件</p>
 <p>#vi /tmp/file1  编辑指定目录/tem 下的 file1 文件</p>
 <p>:w  保存修改</p>
 <p>:q  退出 vi</p>
 <p>:wq  保存并退出</p>
 <p>:q!  强行退出 vi，不保存修改</p>
-<p>2.2.3 vi 命令模式下的操作</p>
-<p>：set nu  设置行号</p>
+<h3 id="2-2-3-vi-命令模式下的操作"><a href="#2-2-3-vi-命令模式下的操作" class="headerlink" title="2.2.3 vi 命令模式下的操作"></a>2.2.3 vi 命令模式下的操作</h3><p>：set nu  设置行号</p>
 <p>：set nonu 取消设置行号</p>
 <p>删除字符</p>
 <p>x 键或 del 键</p>
@@ -485,33 +483,26 @@
 <p>替换内容</p>
 <p>：7，12 s/:/?   把第 7-12 行中每一行的第一个：改成？</p>
 <p>：7，12 s/:/?/g  把第 7-12 行中的：全部改成？</p>
-<p>2.2.4 进入和退出输入模式 i 在光标之前输入文字</p>
-<p>ESC  退出</p>
+<h3 id="2-2-4-进入和退出输入模式-i-在光标之前输入文字"><a href="#2-2-4-进入和退出输入模式-i-在光标之前输入文字" class="headerlink" title="2.2.4 进入和退出输入模式 i 在光标之前输入文字"></a>2.2.4 进入和退出输入模式 i 在光标之前输入文字</h3><p>ESC  退出</p>
 <p>a   在光标之后输入文字</p>
 <p>A   在行尾插入文字</p>
 <p>o   光标下面插入 1 行空行</p>
 <p>O   在光标上面插入 1 行空行</p>
-<p>第三章 linux 的文件系统</p>
-<p>3.1 文件系统</p>
-<p>文件系统（file system）是指数据在计算机的硬盘中存放的格式，针对不同的操作系统，文件存储格式和存取的方式各不相同，所以文件系统也不尽相同。</p>
-<p>3.1.1 windows 的文件系统</p>
-<p>1、FAT16 file allocation table 文件分配表2、FAT32</p>
+<h1 id="第三章-linux-的文件系统"><a href="#第三章-linux-的文件系统" class="headerlink" title="第三章 linux 的文件系统"></a>第三章 linux 的文件系统</h1><h2 id="3-1-文件系统"><a href="#3-1-文件系统" class="headerlink" title="3.1 文件系统"></a>3.1 文件系统</h2><p>文件系统（file system）是指数据在计算机的硬盘中存放的格式，针对不同的操作系统，文件存储格式和存取的方式各不相同，所以文件系统也不尽相同。</p>
+<h3 id="3-1-1-windows-的文件系统"><a href="#3-1-1-windows-的文件系统" class="headerlink" title="3.1.1 windows 的文件系统"></a>3.1.1 windows 的文件系统</h3><p>1、FAT16 file allocation table 文件分配表2、FAT32</p>
 <p>3、NTFS new technology file system 新技术文件系统</p>
-<p>3.2 linux 文件系统介绍</p>
-<p>1、Ext2    标准的 linux 文件系统</p>
-<p>2、Ext3    Ext2 的升级版，增加日志功能，并有根据日志中断重整功能。3、linux swap linux 的交换分区</p>
+<h2 id="3-2-linux-文件系统介绍"><a href="#3-2-linux-文件系统介绍" class="headerlink" title="3.2 linux 文件系统介绍"></a>3.2 linux 文件系统介绍</h2><p>1、Ext2    标准的 linux 文件系统</p>
+<p>2、Ext3    Ext2 的升级版，增加日志功能，并有根据日志中断重整功能。</p>
+<p>3、linux swap linux 的交换分区</p>
 <p>4、VFAT    长文件名系统，与 windows 共同支持的文件系统。其他支持的：fat、ISO9660、cramfs</p>
-<p>3.3 linux 下的目录和文件类型</p>
-<p>在查看文件的基本属性的时候，每一行的第一位，也就是权限位之前的那一位表示文件的类型：</p>
+<h2 id="3-3-linux-下的目录和文件类型"><a href="#3-3-linux-下的目录和文件类型" class="headerlink" title="3.3 linux 下的目录和文件类型"></a>3.3 linux 下的目录和文件类型</h2><p>在查看文件的基本属性的时候，每一行的第一位，也就是权限位之前的那一位表示文件的类型：</p>
 <p>- 代表普通文件d 代表目录文件l 代表链接文件p 代表管道文件</p>
 <p>以及其他的 s、b、c 等特殊文件</p>
 <p>文件的扩展名（后缀）</p>
 <p>文件的后缀名主要是方便用户和系统识别，例如:“.jpg”“.mp3”用户看到可以知道.jpg 是图片文件， 而.mp3 是音频文件；系统读取的时候可以用来识别与哪些程序关联。以方便双击打开。对系统内部来说， 扩展名没有太大的意义。</p>
-<p>3.4 linux 文件系统和 windows 文件系统的对比</p>
-<p>LINUX：存储设备在文件系统层次结构中，以目录表示；用正斜杠/分割目录；文件名不需要后缀；每个文件/目录都有与之相关的权限和所有权</p>
+<h2 id="3-4-linux-文件系统和-windows-文件系统的对比"><a href="#3-4-linux-文件系统和-windows-文件系统的对比" class="headerlink" title="3.4 linux 文件系统和 windows 文件系统的对比"></a>3.4 linux 文件系统和 windows 文件系统的对比</h2><p>LINUX：存储设备在文件系统层次结构中，以目录表示；用正斜杠/分割目录；文件名不需要后缀；每个文件/目录都有与之相关的权限和所有权</p>
 <p>WINDOWS：驱动器以字母表示；用反斜杠\分割目录；文件名的后缀有特殊含义；安全特性各不相同</p>
-<p>3.5 linux 系统下的默认目录</p>
-<p>/bin</p>
+<h2 id="3-5-linux-系统下的默认目录"><a href="#3-5-linux-系统下的默认目录" class="headerlink" title="3.5 linux 系统下的默认目录"></a>3.5 linux 系统下的默认目录</h2><p>/bin</p>
 <p>/boot</p>
 <p>/dev</p>
 <p>/etc</p>
@@ -522,9 +513,7 @@
 <p>/tmp</p>
 <p>/usr</p>
 <p>/var</p>
-<p>3.6 linux 的目录与文件的权限</p>
-<p>3.6.1 权限的类型</p>
-<div class="table-container">
+<h2 id="3-6-linux-的目录与文件的权限"><a href="#3-6-linux-的目录与文件的权限" class="headerlink" title="3.6 linux 的目录与文件的权限"></a>3.6 linux 的目录与文件的权限</h2><h3 id="3-6-1-权限的类型"><a href="#3-6-1-权限的类型" class="headerlink" title="3.6.1 权限的类型"></a>3.6.1 权限的类型</h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -548,8 +537,7 @@
 </table>
 </div>
 <p>1 代表执行，2 代表写，3 代表 1+2，4 代表读,5 代表 1+4，6 代表 2+4，7 代表 1+2+4</p>
-<p>3.6.2 三组、九位权限位</p>
-<div class="table-container">
+<h3 id="3-6-2-三组、九位权限位"><a href="#3-6-2-三组、九位权限位" class="headerlink" title="3.6.2 三组、九位权限位"></a>3.6.2 三组、九位权限位</h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -575,16 +563,14 @@
 </tbody>
 </table>
 </div>
-<p>3.6.3 更改目录、文件的权限值</p>
-<p>chmod 命 令</p>
+<h3 id="3-6-3-更改目录、文件的权限值"><a href="#3-6-3-更改目录、文件的权限值" class="headerlink" title="3.6.3 更改目录、文件的权限值"></a>3.6.3 更改目录、文件的权限值</h3><p>chmod 命 令</p>
 <p>1、数值表示法 chmod 数值 文件名/目录名</p>
 <p>chmod 766 dir1  将目录 dir1 的权限更改为 4+2+1 4+2 4+2</p>
 <p>chmod 777 file1 将文件 file1 的权限更改为 4+2+1 4+2+1 4+2+1</p>
 <p>2、字母描述法 chmod?? 属主(或属组或其他人或所有的)=(或者+或者-)权限 文件名/目录名chmod u=r file1 给文件的属组赋予读取权限</p>
 <p>chmod u=wx file1 给文件的属组赋予写和执行权限chmod g+rw file1 给文件的属组增加读写权限chmod g-rw file1 给文件的属组去掉读写权限</p>
 <p>chmod o=rw file1 给文件的其他用户的权限改为读写chmod a+rwx file1 给所有用户增加读写和执行权限</p>
-<p>3.6.4 系统的 umask 值</p>
-<p>umask 值可以计算，当创建目录或文件时系统默认分配的权限。创建文件的默认权限是 666 减掉权限位数值，目录的默认权限是 777 减掉权限位的数值。</p>
+<h3 id="3-6-4-系统的-umask-值"><a href="#3-6-4-系统的-umask-值" class="headerlink" title="3.6.4 系统的 umask 值"></a>3.6.4 系统的 umask 值</h3><p>umask 值可以计算，当创建目录或文件时系统默认分配的权限。创建文件的默认权限是 666 减掉权限位数值，目录的默认权限是 777 减掉权限位的数值。</p>
 <p>[root@localhost ~]umask 0022</p>
 <p>查看系统默认的 umask 值为 0022，第一位 0 代表粘贴位，第 2-4 位代表权限位这样系统默认创建文件的权限为 666-022 为 644 为属主读写，属组读，其他读</p>
 <p>系统默认创建文件夹的权限位 777-022 为属主读写执行，属组读执行，其他读执行</p>
@@ -608,8 +594,7 @@
 <p>chmod 7777 dir1</p>
 <p>drwsrwsrwt root root 4096 dec 17 19:05 dir1</p>
 <p>更改 dir1 的权限，增加粘贴位权限，用户和组位特殊权限，属主为读写执行，属组为读写执行，其他用户为读写执行</p>
-<p>3.6.6 更改目录或是文件的属主或属组</p>
-<p>必须由文件或目录的属主或超级用户才能修改！！！</p>
+<h3 id="3-6-6-更改目录或是文件的属主或属组"><a href="#3-6-6-更改目录或是文件的属主或属组" class="headerlink" title="3.6.6 更改目录或是文件的属主或属组"></a>3.6.6 更改目录或是文件的属主或属组</h3><p>必须由文件或目录的属主或超级用户才能修改！！！</p>
 <p>chown 命令更改目录或文件的属主和属组</p>
 <p>chown u1 dir1   将当前目录下的 dir1 目录的属主改为 u1</p>
 <p>chown u2.g1 dir1  将当前目录下的 dir2 目录的属主改为 u2 属组改为 g1</p>
@@ -619,16 +604,11 @@
 <p>chgrp 命令更改目录或文件所属的组chgrp g1 dir2 将 dir2 的属组更改为 g2</p>
 <p>以空格分开，同时更改多个目录，并且支持通配符来修改多个目录和文件，支持用户和组的 ID 来修改</p>
 <p>-R  递归式改变指定目录及目录下所有文件和子目录</p>
-<p>第四章.linux 的硬件管理</p>
-<p>4.1.1 计算机的硬件管理</p>
-<p>在 linux 下，计算机所有设备是以文件的形势存在的。在 linux 下查看硬件信息</p>
+<h1 id="第四章-linux-的硬件管理"><a href="#第四章-linux-的硬件管理" class="headerlink" title="第四章.linux 的硬件管理"></a>第四章.linux 的硬件管理</h1><h3 id="4-1-1-计算机的硬件管理"><a href="#4-1-1-计算机的硬件管理" class="headerlink" title="4.1.1 计算机的硬件管理"></a>4.1.1 计算机的硬件管理</h3><p>在 linux 下，计算机所有设备是以文件的形势存在的。在 linux 下查看硬件信息</p>
 <p>1、lspci 列出所有的 PCI 设备2、fdisk -l 查看存储设备信息</p>
 <p>3、查看/proc 目录下相应的文件来查看一些设备信息cat /proc/cpuinfo 查看 CPU 的信息</p>
-<p>4.1.2 kudzu 配置硬件</p>
-<p>kudzu 命令相当于 windows 的检查新硬件。</p>
-<p>4.2 磁盘管理</p>
-<p>4.2.1 在 linux 下的硬盘的编号和分区的编号</p>
-<p>1、IDE 硬盘，在 linux 下以 hd 加编号组成，由于计算机通常 1 个 IDE 通道可以连接 2 块硬盘，所以在linux 的编号如下：</p>
+<h3 id="4-1-2-kudzu-配置硬件"><a href="#4-1-2-kudzu-配置硬件" class="headerlink" title="4.1.2 kudzu 配置硬件"></a>4.1.2 kudzu 配置硬件</h3><p>kudzu 命令相当于 windows 的检查新硬件。</p>
+<h2 id="4-2-磁盘管理"><a href="#4-2-磁盘管理" class="headerlink" title="4.2 磁盘管理"></a>4.2 磁盘管理</h2><h3 id="4-2-1-在-linux-下的硬盘的编号和分区的编号"><a href="#4-2-1-在-linux-下的硬盘的编号和分区的编号" class="headerlink" title="4.2.1 在 linux 下的硬盘的编号和分区的编号"></a>4.2.1 在 linux 下的硬盘的编号和分区的编号</h3><p>1、IDE 硬盘，在 linux 下以 hd 加编号组成，由于计算机通常 1 个 IDE 通道可以连接 2 块硬盘，所以在linux 的编号如下：</p>
 <p>第一通道上的第一块为 hda 第一通道上的第二块为 hdb 第二通道上的第一块为 hdc 第二通道上的第二块为 hdd</p>
 <p>其他的依次类推，常见 pc 机上的 IDE 通道为 2 个</p>
 <p>2、sata 硬盘和 scsi 硬盘在 linux 下以 sd 加编号组成，1 个 scsi 通道可以连接 15 块硬盘(其中 1 个连接SCSI 卡)</p>
@@ -636,8 +616,7 @@
 <p>其他依次类推，sata 硬盘常应用于 PC 机，类似与 IDE 3、分区编号</p>
 <p>在硬盘编号后面加上数字编号来表示第几块硬盘上的第几个分区1—4 为主分区（扩展分区的编号）</p>
 <p>5 以后为逻辑磁盘的编号</p>
-<p>4.2.24.2.2</p>
-<p>fdisk 磁盘管理命令</p>
+<h3 id="4-2-24-2-2"><a href="#4-2-24-2-2" class="headerlink" title="4.2.24.2.2"></a>4.2.24.2.2</h3><p>fdisk 磁盘管理命令</p>
 <p>fdisk -l 显示磁盘分区信息</p>
 <p>对新硬盘进行分区</p>
 <p>fdisk /dev/sdb  对第二块 scsi 硬盘进行分区操作（在命令后加硬盘设备文件的名称） 如果 fdisk 命令不能工作可以给 fdisk 命令加上完整路径来执行/sbin/fdisk</p>
@@ -646,11 +625,9 @@
 <p>n  创建分区</p>
 <p>p  显示当前分区表</p>
 <p>q  不保存退出 fdisk 实用程序w 保存并退出 fdisk 实用程序</p>
-<p>4.2.3 磁盘分区的格式化</p>
-<p>mkfs 命令对磁盘进行文件系统的格式化</p>
+<h3 id="4-2-3-磁盘分区的格式化"><a href="#4-2-3-磁盘分区的格式化" class="headerlink" title="4.2.3 磁盘分区的格式化"></a>4.2.3 磁盘分区的格式化</h3><p>mkfs 命令对磁盘进行文件系统的格式化</p>
 <p>mkfs -t ext2 /dev/sdb1 将第二块 scsi 硬盘的第一个分区格式化为 ext2 文件系统mkfs.ext3 /dev/sdb1 将第二块 scsi 硬盘的第一个分区格式化为 ext3 文件系统mkfs.vfat /dev/sdb2 将第二块 scsi 硬盘的第二个分区格式化为 vfat 文件系统</p>
-<p>4.2.4 磁盘分区的挂载</p>
-<p>mount 命令挂载磁盘分区文件系统</p>
+<h3 id="4-2-4-磁盘分区的挂载"><a href="#4-2-4-磁盘分区的挂载" class="headerlink" title="4.2.4 磁盘分区的挂载"></a>4.2.4 磁盘分区的挂载</h3><p>mount 命令挂载磁盘分区文件系统</p>
 <p>mount -t ext3 /dev/sdb1 /media/test 将 ext3 文件系统的第二块 scsi 的第一个分区挂载到/media/test 目录下</p>
 <p>mount /dev/sdb2 /media/dir 将第二块 scsi 的第二个分区挂载到/media/dir 目录下</p>
 <p>-t 参数指定文件系统类型</p>
@@ -663,7 +640,7 @@
 <p>-l 只显示本地文件系统</p>
 <p>-t 加文件系统类型，只显示指定文件系统类型</p>
 <p>-x 加文件系统类型，只显示指定文件类型意外的系统类型</p>
-<p>4.2.4.1 自动挂载和按需挂载1、开机自动挂载</p>
+<h3 id="4-2-4-1-自动挂载和按需挂载"><a href="#4-2-4-1-自动挂载和按需挂载" class="headerlink" title="4.2.4.1 自动挂载和按需挂载"></a>4.2.4.1 自动挂载和按需挂载</h3><p>1、开机自动挂载</p>
 <p>vi /etc/fstab 文件</p>
 <p>增加一行</p>
 <p>/dev/sda1   /mnt/data  ext3   defaults 0 0 要挂载的设备       挂载的目录 文件系统       操作模式reboot 重启查看效果。</p>
@@ -675,8 +652,7 @@
 <p>vi /etc/auto.misc 增加一行</p>
 <p>rose      -fstype=ext3    :/dev/sda1</p>
 <p>挂载的虚拟目录 挂载的文件系统类型   要挂载的设备service autofs restart     重启挂载服务</p>
-<p>4.2.5 swap 交换分区的调整</p>
-<p>free 显示内存信息命令,包含物理内存，交换分区和内核缓冲区文件。</p>
+<h3 id="4-2-5-swap-交换分区的调整"><a href="#4-2-5-swap-交换分区的调整" class="headerlink" title="4.2.5 swap 交换分区的调整"></a>4.2.5 swap 交换分区的调整</h3><p>free 显示内存信息命令,包含物理内存，交换分区和内核缓冲区文件。</p>
 <p>-m 以M 为单位显示内存信息</p>
 <p>1、使用虚拟设备生成空文件（将交换分区增加 100M）</p>
 <p>dd  if=/dev/zero of=/tmp/swp1(要创建的交换分区目录) bs=10M(每个区块的大小) count=10(区块数</p>
@@ -684,20 +660,16 @@
 <p>2、生成交换分区文件mkswap /tmp/swp1</p>
 <p>3、激活交换分区swapon /tmp/swp1</p>
 <p>4、使交换分区永久生效，修改配置文件vi /etc/rc.local 最后添加一行swapon /tmp/swp1</p>
-<p>4.2.6  创建 RAID 磁盘阵列mdadm 命令</p>
-<p>mdadm -C  /dev/md0  -l5   -n3   /dev/sdb1 /dev/sdb2 /dev/sdb3 RAID 设备名 RAID 级别 分区数量 分区设备名称</p>
+<h3 id="4-2-6-创建-RAID-磁盘阵列mdadm-命令"><a href="#4-2-6-创建-RAID-磁盘阵列mdadm-命令" class="headerlink" title="4.2.6  创建 RAID 磁盘阵列mdadm 命令"></a>4.2.6  创建 RAID 磁盘阵列mdadm 命令</h3><p>mdadm -C  /dev/md0  -l5   -n3   /dev/sdb1 /dev/sdb2 /dev/sdb3 RAID 设备名 RAID 级别 分区数量 分区设备名称</p>
 <p>more /proc/mdstat 查看 RAID 状态</p>
 <p>mkfs.ext3 /dev/md0 格式化</p>
 <p>mount /dev/md0 /media/raid 挂载到/media/raid 目录</p>
 <p>mdadm /dev/md0 -f /dev/sdb1（损坏的设备名称） 标记损坏设备mdadm /dev/md0 -a /dev/sdc1（新设备名称） 添加新设备</p>
 <p>mdadm /dev/md0 -r /dev/sdb1（损坏的设备名称） 移除损坏的设备</p>
-<p>4.2.7  挂载使用光驱</p>
-<p>mount /dev/cdrom /media/cd(挂载目录) 制作 ISO 文件</p>
+<h3 id="4-2-7-挂载使用光驱"><a href="#4-2-7-挂载使用光驱" class="headerlink" title="4.2.7  挂载使用光驱"></a>4.2.7  挂载使用光驱</h3><p>mount /dev/cdrom /media/cd(挂载目录) 制作 ISO 文件</p>
 <p>dd if=/dev/cdrom of=/tmp/rsing.iso(iso 文件名称和存放的位置) 直接使用 ISO 文件</p>
 <p>mount -o loop /tmp/rsing.iso(iso 文件名称和存放的位置) /media/iso(挂载的目录)</p>
-<p>第五章.linux 下的用户和组的管理</p>
-<p>5.1  linux 系统下用户角色</p>
-<p>在 linux 系统下用户的角色不同，权限和所能完成的任务也不同，用户角色是通过 UID 来识别的， 注意：在 linux 下要注意 root 用户的 UID 的唯一性。</p>
+<h1 id="第五章-linux-下的用户和组的管理"><a href="#第五章-linux-下的用户和组的管理" class="headerlink" title="第五章.linux 下的用户和组的管理"></a>第五章.linux 下的用户和组的管理</h1><h2 id="5-1-linux-系统下用户角色"><a href="#5-1-linux-系统下用户角色" class="headerlink" title="5.1  linux 系统下用户角色"></a>5.1  linux 系统下用户角色</h2><p>在 linux 系统下用户的角色不同，权限和所能完成的任务也不同，用户角色是通过 UID 来识别的， 注意：在 linux 下要注意 root 用户的 UID 的唯一性。</p>
 <p>1、Root</p>
 <p>系统管理员超级用户，系统唯一，可以登陆系统，可以操作任何文件和命令，拥有最高权限，UID 值</p>
 <p>为 0</p>
@@ -706,8 +678,7 @@
 <p>3、普通真实用户</p>
 <p>这类用户可以登陆系统，但是只能操作自己家目录的内容，受限账户，这类用户都是管理员自行添加</p>
 <p>的。</p>
-<p>5.1.2 用户相关文件介绍</p>
-<p>在 windows 当中可以使用计算机管理工具中的用户和组的管理工具来对用户进行管理，在 linux 下是</p>
+<h3 id="5-1-2-用户相关文件介绍"><a href="#5-1-2-用户相关文件介绍" class="headerlink" title="5.1.2 用户相关文件介绍"></a>5.1.2 用户相关文件介绍</h3><p>在 windows 当中可以使用计算机管理工具中的用户和组的管理工具来对用户进行管理，在 linux 下是</p>
 <p>通过对用户配置文件（区别与 windows 中的用户配置文件）的管理来实现对用户和组的管理1、/etc/passwd 用户账号文件，记录所有用户记录</p>
 <p>每行表示一个用户信息，7 个字段都有各自的含义</p>
 <p>root :  x :  0  :   0   :   root  :   /root  : /bin/bash</p>
@@ -734,8 +705,7 @@
 <p>该选项是一个安全选项，执行命令可以把用户名和密码分别存放在两个文件当中，影子文件就是密码</p>
 <p>文件。</p>
 <p>pwconv  开启投影密码命令pwunconv 关闭投影密码命令</p>
-<p>5.1.2  用户管理</p>
-<p>1、useradd 创建用户命令</p>
+<h3 id="5-1-2-用户管理"><a href="#5-1-2-用户管理" class="headerlink" title="5.1.2  用户管理"></a>5.1.2  用户管理</h3><p>1、useradd 创建用户命令</p>
 <p>useradd jake 创建名为 jake 的用户</p>
 <p>-d 指定用户的家目录</p>
 <p>-g 指定用户组</p>
@@ -761,10 +731,8 @@
 <p>注意：只有 root 和组管理员能够改变组成员gpasswd -a u1 g1 将 u1 加入到 g1 组gpasswd -d u1 g1 将 u1 退出 g1 组</p>
 <p>gpasswd -A u1 g1 将 g1 组的管理员指派给 u1 7、id 查看 ID 信息命令</p>
 <p>id rose 查看 rose 用户的 ID 信息</p>
-<p>5.1.3 root 单用户</p>
-<p>如果希望计算机除了 root 账号外其他账号不能登陆，在/etc 目录中执行 touch nologin，创建 1 个名称为 nologin 的文件。如果系统只有一个人使用，可以考虑修改/etc/inittab 文件，将默认启动值改为2。</p>
-<p>5.2 组的管理</p>
-<p>5.2.1 组相关文件介绍1、/etc/group</p>
+<h3 id="5-1-3-root-单用户"><a href="#5-1-3-root-单用户" class="headerlink" title="5.1.3 root 单用户"></a>5.1.3 root 单用户</h3><p>如果希望计算机除了 root 账号外其他账号不能登陆，在/etc 目录中执行 touch nologin，创建 1 个名称为 nologin 的文件。如果系统只有一个人使用，可以考虑修改/etc/inittab 文件，将默认启动值改为2。</p>
+<h2 id="5-2-组的管理"><a href="#5-2-组的管理" class="headerlink" title="5.2 组的管理"></a>5.2 组的管理</h2><h3 id="5-2-1-组相关文件介绍"><a href="#5-2-1-组相关文件介绍" class="headerlink" title="5.2.1 组相关文件介绍"></a>5.2.1 组相关文件介绍</h3><p>1、/etc/group</p>
 <p>用户组的特性在系统管理中为系统管理员提供了极大的方便，但安全性也是值得关注的，如某个用户下有对系统管理有最重要的内容，最好让用户拥有独立的用户组，或者是把用户下的文件的权限设置为完全私有；另外 root 用户组一般不要轻易把普通用户加入进去，</p>
 <p>/etc/group 内容具体分析</p>
 <p>/etc/group 的内容包括用户组（Group）、用户组口令、GID 及该用户组所包含的用户（User），每个用户组一条记录；格式如下： group_name:passwd:GID:user_list</p>
@@ -785,8 +753,7 @@
 <p>第一字段：这个例子中，有两个用户组 jake 用 rose</p>
 <p>第二字段：用户组的密码，jake 用户组无密码；rose 用户组有已经，已经加密； 第三字段：用户组管理者，两者都为空；</p>
 <p>第四字段：jake 用户组所拥有的成员是 rose，rose 用户组有成员 rose</p>
-<p>5.2.2  组的管理</p>
-<p>1、groupadd 添加用户组</p>
+<h3 id="5-2-2-组的管理"><a href="#5-2-2-组的管理" class="headerlink" title="5.2.2  组的管理"></a>5.2.2  组的管理</h3><p>1、groupadd 添加用户组</p>
 <p>-g 指定 GID</p>
 <p>-o 一般和g 选项同时使用，可以与已有组的 GID 相同groupadd -go 501 g1 创建组 g1 其 GID 可以与已有的组重复2、gpasswd 设置用户组的密码</p>
 <p>一般的情况下，没有必要设置用户组的密码； gpasswd rose  修改 rose 组的密码</p>
@@ -797,8 +764,7 @@
 <p>-n 修改组名</p>
 <p>groupmod -g 601 g1 修改 g1 的 GID 为 601 groupmod -n g11 g1 将 g1 组改名为 g11 5、newgrp 切换用户组</p>
 <p>newgrp root 切换到 root 组</p>
-<p>5.3  普通用户权限提升</p>
-<p>1、su 切换用户命令</p>
+<h2 id="5-3-普通用户权限提升"><a href="#5-3-普通用户权限提升" class="headerlink" title="5.3  普通用户权限提升"></a>5.3  普通用户权限提升</h2><p>1、su 切换用户命令</p>
 <p>su 直接默认切换到 root 用户</p>
 <p>su - root 更改环境变量为 root 用户的su -m root 保留环境变量不变</p>
 <p>su -c “/usr/sbin/useradd u1” root 以 root 的身份执行 useradd 命令，-c 代表执行一个命令后就结</p>
@@ -812,8 +778,7 @@
 <p>执行 sudo 命令</p>
 <p>sudo -l  列出用户在主机上可用的和被禁止的命令sudo 命令（命令为绝对路径）来执行命令</p>
 <p>sudo /bin/cat /etc/shadow</p>
-<p>5.4 磁盘配额</p>
-<p>windows 不能对组进行配额设置，而 linux 可以对组进行配额限制。1、vi /etc/fstab 文件</p>
+<h2 id="5-4-磁盘配额"><a href="#5-4-磁盘配额" class="headerlink" title="5.4 磁盘配额"></a>5.4 磁盘配额</h2><p>windows 不能对组进行配额设置，而 linux 可以对组进行配额限制。1、vi /etc/fstab 文件</p>
 <p>将要设置配额的分区设置开机自动挂载在添加行在 defaults 后面加上，usrquota（grpquota）表示要建立用户或组的磁盘配额</p>
 <p>2、重新挂载文件系统</p>
 <p>之前重启看效果，可以使用 umount -a 卸载所有文件挂载，然后使用 mount -a 挂载所有文件系统3、在挂载目录下创建 aquota.user 文件</p>
@@ -852,19 +817,11 @@
 <p>创建文件，占用磁盘空间，然后超过软极限，看提醒，然后再超过硬极限，看效果</p>
 <p>如果要对其他用户设置相同的配额，可以复制配额edquota -up rose u1 u2 u3</p>
 <p>如果要使配额每次启动生效，可以将配额检查和激活命令放在默认/etc/rc.d/rc.sysinit 启动脚本中。</p>
-<p>第六章.linux 下软件的安装与管理</p>
-<p>6.1 linux 下软件介绍</p>
-<p>6.1.1 rpm 包</p>
-<p>Redhat Package Manager</p>
+<h1 id="第六章-linux-下软件的安装与管理"><a href="#第六章-linux-下软件的安装与管理" class="headerlink" title="第六章.linux 下软件的安装与管理"></a>第六章.linux 下软件的安装与管理</h1><h2 id="6-1-linux-下软件介绍"><a href="#6-1-linux-下软件介绍" class="headerlink" title="6.1 linux 下软件介绍"></a>6.1 linux 下软件介绍</h2><h3 id="6-1-1-rpm-包"><a href="#6-1-1-rpm-包" class="headerlink" title="6.1.1 rpm 包"></a>6.1.1 rpm 包</h3><p>Redhat Package Manager</p>
 <p>红帽子包管理器(RPM)提供了标准化方式，可以对各种实用程序和应用程序组织所要的软件。红帽子包管理器使红帽子公司很容易地把 Linux 组织成不到两千个包，而不是几万个文件。</p>
 <p>类似于 windows 的.exe 文件</p>
-<p>6.1.2 srpm 包</p>
-<p>srpm 包为未编译过的 rpm 包，需要以 rpm 管理的方式编译，然后以 rpm 的安装方式安装</p>
-<p>6.1.3 tar 包</p>
-<p>压缩包，常见的有.tar.gz 和.tar.bz2，其中 gz 为使用gzip 压缩的 tar 包，如“linuxqq_v1.0- preview3_i386.tar.gz”最新的 QQ 版本，前面为文件名称，后面为文件的扩展名，我们可以看出是以gzip 压缩的 tar 包；.tar.bz2 是以 bzip 压缩的 tar 包。</p>
-<p>6.2 rpm 包</p>
-<p>6.2.1 rpm 与 cpu</p>
-<p>rpm 包是依赖 cpu 架构的，常见的格式：</p>
+<h3 id="6-1-2-srpm-包"><a href="#6-1-2-srpm-包" class="headerlink" title="6.1.2 srpm 包"></a>6.1.2 srpm 包</h3><p>srpm 包为未编译过的 rpm 包，需要以 rpm 管理的方式编译，然后以 rpm 的安装方式安装</p>
+<h3 id="6-1-3-tar-包"><a href="#6-1-3-tar-包" class="headerlink" title="6.1.3 tar 包"></a>6.1.3 tar 包</h3><h3 id="压缩包，常见的有-tar-gz-和-tar-bz2，其中-gz-为使用gzip-压缩的-tar-包，如“linuxqq-v1-0-preview3-i386-tar-gz”最新的-QQ-版本，前面为文件名称，后面为文件的扩展名，我们可以看出是以gzip-压缩的-tar-包；-tar-bz2-是以-bzip-压缩的-tar-包。"><a href="#压缩包，常见的有-tar-gz-和-tar-bz2，其中-gz-为使用gzip-压缩的-tar-包，如“linuxqq-v1-0-preview3-i386-tar-gz”最新的-QQ-版本，前面为文件名称，后面为文件的扩展名，我们可以看出是以gzip-压缩的-tar-包；-tar-bz2-是以-bzip-压缩的-tar-包。" class="headerlink" title="压缩包，常见的有.tar.gz 和.tar.bz2，其中 gz 为使用gzip 压缩的 tar 包，如“linuxqq_v1.0- preview3_i386.tar.gz”最新的 QQ 版本，前面为文件名称，后面为文件的扩展名，我们可以看出是以gzip 压缩的 tar 包；.tar.bz2 是以 bzip 压缩的 tar 包。"></a>压缩包，常见的有.tar.gz 和.tar.bz2，其中 gz 为使用gzip 压缩的 tar 包，如“linuxqq_v1.0- preview3_i386.tar.gz”最新的 QQ 版本，前面为文件名称，后面为文件的扩展名，我们可以看出是以gzip 压缩的 tar 包；.tar.bz2 是以 bzip 压缩的 tar 包。</h3><h2 id="6-2-rpm-包"><a href="#6-2-rpm-包" class="headerlink" title="6.2 rpm 包"></a>6.2 rpm 包</h2><h3 id="6-2-1-rpm-与-cpu"><a href="#6-2-1-rpm-与-cpu" class="headerlink" title="6.2.1 rpm 与 cpu"></a>6.2.1 rpm 与 cpu</h3><p>rpm 包是依赖 cpu 架构的，常见的格式：</p>
 <p>扩展名CPU</p>
 <p>noarch.rpm</p>
 <p>不依赖于 CPU， 可以在所有计算机上安装i386.rpm</p>
@@ -878,8 +835,7 @@
 <p>用于带Apple Powe rPC CPU 的计算机s390.rpm</p>
 <p>用于基于 S/390 CPU 的IBM 服务器sparc.rpm</p>
 <p>用于带 Sun 系统公司 SPARC CPU 的计算机</p>
-<p>6.2.2 rpm 软件包的查询rpm 命令</p>
-<p>-q 对已安装的包进行简单查询</p>
+<h3 id="6-2-2-rpm-软件包的查询rpm-命令"><a href="#6-2-2-rpm-软件包的查询rpm-命令" class="headerlink" title="6.2.2 rpm 软件包的查询rpm 命令"></a>6.2.2 rpm 软件包的查询rpm 命令</h3><p>-q 对已安装的包进行简单查询</p>
 <p>rpm -q packagename（包的名称）</p>
 <p>rpm -qi packagename 对已安装的包进行详细信息查询</p>
 <p>rpm -ql packagename 查询已安装包中包含的文件rpm -qa 显示已经安装的所有 rpm 包</p>
@@ -889,18 +845,15 @@
 <p>rpm -i /media/udisk/linux/linuxqq_v1.0-preview3_i386.rpm 安装指定目录下的包rpm -ivh packagename 安装包并显示安装的进度和详细信息</p>
 <p>-v 显示安装过程的详细处理过程</p>
 <p>-h 显示安装进度</p>
-<p>6.2.3 rpm 包的卸载</p>
-<p>rpm -e packagename 卸载已安装的 rpm 包可以以空格隔开同时删除多个包</p>
+<h3 id="6-2-3-rpm-包的卸载"><a href="#6-2-3-rpm-包的卸载" class="headerlink" title="6.2.3 rpm 包的卸载"></a>6.2.3 rpm 包的卸载</h3><p>rpm -e packagename 卸载已安装的 rpm 包可以以空格隔开同时删除多个包</p>
 <p>举例为：</p>
 <p>linuxqq-v1.0-preview3.i386.rpm RealPlayerGoldforLinuxGold11.rpm VirtualBox-2.1.0_41146_rhel5-1.i386.rpm</p>
-<p>6.3 srpm 包的安装</p>
-<p>源代码RPM 包的结尾通常是.src.rpm</p>
+<h2 id="6-3-srpm-包的安装"><a href="#6-3-srpm-包的安装" class="headerlink" title="6.3 srpm 包的安装"></a>6.3 srpm 包的安装</h2><p>源代码RPM 包的结尾通常是.src.rpm</p>
 <p>使用方法</p>
 <p>rpm -i rpmpackage.src.rpm cd /usr/src/redhat/SPECS</p>
 <p>rpmbuild -bb rpmpackage.specs</p>
 <p>/usr/src/redhat/RPM/i386/目录下，有一个新的 rpm 包，这个是编译好的二进制文件。rpm -i new-package.rpm 即可安装完成。</p>
-<p>6.4 tar 包软件的安装和卸载tar 包为压缩包</p>
-<p>常见的文件类型为.tar.gz .tar.bz2 .tgz .tar.zip 在 linux 下安装方式为：</p>
+<h2 id="6-4-tar-包软件的安装和卸载tar-包为压缩包"><a href="#6-4-tar-包软件的安装和卸载tar-包为压缩包" class="headerlink" title="6.4 tar 包软件的安装和卸载tar 包为压缩包"></a>6.4 tar 包软件的安装和卸载tar 包为压缩包</h2><p>常见的文件类型为.tar.gz .tar.bz2 .tgz .tar.zip 在 linux 下安装方式为：</p>
 <p>1、先解压缩，各种文件类型的解压缩方式不同</p>
 <p>.tar.gz .tgz 文件执行tar -xvzf softname.tar.gz tar -xvzf softname.tgz</p>
 <p>-x 解压缩文件</p>
@@ -922,10 +875,7 @@
 <p>演示举例</p>
 <p>linuxqq_v1.0-preview3_i386.tar.gz VmwareToolsforlinux.iso</p>
 <p>webmin-1.400.tar.gz wine-1.1.11.tar.bz2</p>
-<p>第七章.linux 网络基础与网络服务管理</p>
-<p>7.1 网卡的配置</p>
-<p>7.1.1 修改网卡的配置文件</p>
-<p>网卡配置文件的目录/etc/sysconfig/network-scripts 网卡的配置文件类型</p>
+<h1 id="第七章-linux-网络基础与网络服务管理"><a href="#第七章-linux-网络基础与网络服务管理" class="headerlink" title="第七章.linux 网络基础与网络服务管理"></a>第七章.linux 网络基础与网络服务管理</h1><h2 id="7-1-网卡的配置"><a href="#7-1-网卡的配置" class="headerlink" title="7.1 网卡的配置"></a>7.1 网卡的配置</h2><h3 id="7-1-1-修改网卡的配置文件"><a href="#7-1-1-修改网卡的配置文件" class="headerlink" title="7.1.1 修改网卡的配置文件"></a>7.1.1 修改网卡的配置文件</h3><p>网卡配置文件的目录/etc/sysconfig/network-scripts 网卡的配置文件类型</p>
 <p>ifconfig-ethX   有线网卡的配置文件</p>
 <p>ifconfig-ethX:X  有线网卡的虚拟网卡的配置文件ifconfig-wlanX 无线网卡的配置文件</p>
 <p>网卡配置文件中各行代表的含义DEVICE——设备名</p>
@@ -934,37 +884,28 @@
 <p>ONBOOT ——开机启动IPADDR ——Ip 地址</p>
 <p>NETMASK——子网掩码</p>
 <p>可以使用 vi 编辑配置文件来配置网卡</p>
-<p>7.1.2 使用命令配置网卡</p>
-<p>ifconfig 查看 ip 信息</p>
+<h3 id="7-1-2-使用命令配置网卡"><a href="#7-1-2-使用命令配置网卡" class="headerlink" title="7.1.2 使用命令配置网卡"></a>7.1.2 使用命令配置网卡</h3><p>ifconfig 查看 ip 信息</p>
 <p>ifconfig eth0 200.200.200.2 netmask 255.255.255.0</p>
 <p>配置 eth0 的 IP 信息，如果是有类的 IP 地址可以省略 netmask（比较 rip 路由协议） ifdown eth0 禁用网卡</p>
 <p>ifup  eth0  启用网卡</p>
 <p>ifconfig eth0 hw ether 00:11:22:33:44:55 修改网卡 eth0 的MAC 地址</p>
-<p>7.1.3 使用 setup 命令配置（文本用户接口模式）</p>
-<p>7.2 服务管理</p>
-<p>7.2.1 服务的查看</p>
-<p>1、ntsysv 文本用户接口查看</p>
+<h3 id="7-1-3-使用-setup-命令配置（文本用户接口模式）"><a href="#7-1-3-使用-setup-命令配置（文本用户接口模式）" class="headerlink" title="7.1.3 使用 setup 命令配置（文本用户接口模式）"></a>7.1.3 使用 setup 命令配置（文本用户接口模式）</h3><h2 id="7-2-服务管理"><a href="#7-2-服务管理" class="headerlink" title="7.2 服务管理"></a>7.2 服务管理</h2><h3 id="7-2-1-服务的查看"><a href="#7-2-1-服务的查看" class="headerlink" title="7.2.1 服务的查看"></a>7.2.1 服务的查看</h3><p>1、ntsysv 文本用户接口查看</p>
 <p>使用空格键选择或是取消</p>
 <p>2、chkconfig 命令查看开机服务启动情况</p>
 <p>chkconfig - - list 查看所有服务开机同时的开启情况chkconfig - - list 服务名 查看开机服务开启的情况chkconfig - - add 服务名 设置为开机启动chkconfig - - del 服务名 设置为开机不启动</p>
-<p>7.2.2 服务的管理</p>
-<p>service 服务名 start  启动服务service 服务名 stop  停止服务service 服务名 restart 重新启动服务</p>
+<h3 id="7-2-2-服务的管理"><a href="#7-2-2-服务的管理" class="headerlink" title="7.2.2 服务的管理"></a>7.2.2 服务的管理</h3><p>service 服务名 start  启动服务service 服务名 stop  停止服务service 服务名 restart 重新启动服务</p>
 <p>/etc/init.d/服务名 start 启动服务</p>
 <p>/etc/init.d/服务名 stop  停止服务</p>
 <p>/etc/init.d/服务名 restart 重新启动服务</p>
-<p>7.2.3 查看和关闭服务进程ps 命令</p>
-<p>ps -A 简明查看系统启动的所有进程</p>
+<h3 id="7-2-3-查看和关闭服务进程ps-命令"><a href="#7-2-3-查看和关闭服务进程ps-命令" class="headerlink" title="7.2.3 查看和关闭服务进程ps 命令"></a>7.2.3 查看和关闭服务进程ps 命令</h3><p>ps -A 简明查看系统启动的所有进程</p>
 <p>ps -aux 显示所有用户所有进程的详细信息</p>
 <p>ps -A |grep 服务名 显示指定服务的进程简明信息ps -aux |grep 服务名 显示指定服务的详细进程信息kill 命令</p>
 <p>kill 进程号 关闭指定进程</p>
 <p>killall 服务名 关闭服务的所有进程kill -9 进程号 强制关闭指定进程</p>
 <p>killall -9 服务名 强制关闭服务的所有进程</p>
-<p>第八章.文件服务器 NFS 和 Samba</p>
-<p>8.1 NFS 服务器</p>
-<p>8.1.1 NFS 服务器介绍</p>
-<p>NFS network file system 网络文件服务器</p>
+<h1 id="第八章-文件服务器-NFS-和-Samba"><a href="#第八章-文件服务器-NFS-和-Samba" class="headerlink" title="第八章.文件服务器 NFS 和 Samba"></a>第八章.文件服务器 NFS 和 Samba</h1><h2 id="8-1-NFS-服务器"><a href="#8-1-NFS-服务器" class="headerlink" title="8.1 NFS 服务器"></a>8.1 NFS 服务器</h2><h3 id="8-1-1-NFS-服务器介绍"><a href="#8-1-1-NFS-服务器介绍" class="headerlink" title="8.1.1 NFS 服务器介绍"></a>8.1.1 NFS 服务器介绍</h3><p>NFS network file system 网络文件服务器</p>
 <p>最初由 SUN 公司发展起来，一种简单的文件服务器，NFS 允许一个系统在网络上与他人共享目录和文件。</p>
-<p>8.1.2 配置 NFS 服务器1、NFS 的配置相关文件</p>
+<h3 id="8-1-2-配置-NFS-服务器"><a href="#8-1-2-配置-NFS-服务器" class="headerlink" title="8.1.2 配置 NFS 服务器"></a>8.1.2 配置 NFS 服务器</h3><p>1、NFS 的配置相关文件</p>
 <p>/etc/exports NFS 服务的管理</p>
 <p>service nfs start(stop,restart) 检查 NFS 服务是否开机启动chkconfig - - list nfs</p>
 <p>检查 NFS 包是否安装rpm -qa |grep nfs NFS 的安装</p>
@@ -991,9 +932,7 @@
 <p>mount 192.168.1.1:/nfs/sh2 /mnt/nf2</p>
 <p>将 NFS 服务器 192.168.1.1 上的/nfs/sh2 共享目录挂载到本机的/mnt/nf2 目录下如果指定文件系统类型</p>
 <p>mount -t nfs 192.168.1.1:/nfs/sh2 /mnt/nf2</p>
-<p>8.2 samba 服务器</p>
-<p>8.2.1 samba 服务器介绍SMB 协议</p>
-<p>SMB（Server MessageBlock，服务信息块）协议可以看作是局域网上的共享文件/打印机的一种协议，它可以为网络内部的其它 Windows 和 Linux 机器提供文件系统、打印服务或是其他一些信息。</p>
+<h2 id="8-2-samba-服务器"><a href="#8-2-samba-服务器" class="headerlink" title="8.2 samba 服务器"></a>8.2 samba 服务器</h2><h3 id="8-2-1-samba-服务器介绍SMB-协议"><a href="#8-2-1-samba-服务器介绍SMB-协议" class="headerlink" title="8.2.1 samba 服务器介绍SMB 协议"></a>8.2.1 samba 服务器介绍SMB 协议</h3><p>SMB（Server MessageBlock，服务信息块）协议可以看作是局域网上的共享文件/打印机的一种协议，它可以为网络内部的其它 Windows 和 Linux 机器提供文件系统、打印服务或是其他一些信息。</p>
 <p>samba</p>
 <p>Samba 是用来实现 SMB 的一种软件，由澳大利亚的 Andew Tridgell 开发，是一种在 Linux（Unix）环境下运行的免费软件。Samba 整合了 SMB 协议及 Netbios 协议，使其运做在 TCP/IP 上。能够让 Unix based 的机器与 windows 互动，采用的是服务器/客户端的架构，执行 Samba 客户端程序，我们就可以访问 Windows 主机上的共享资源。而运行 Samba 服务器，Windows 主机也可以访问 Linux 上的共享资源。</p>
 <p>SAMBA 服务有两个进程： smbd：SMB 服务器nmbd：netbios 名字服务器。</p>
@@ -1004,7 +943,7 @@
 <p>\3. 决定每一个目录由谁来使用，可以让一个人、某些人、组和所有人访问。</p>
 <p>\4. 决定打印机由谁来使用，可以让一个人、某些人、组和所有人使用。</p>
 <p>可以看出，安装和配置好了 Samba 服务器后，Linux 就可以使用 Windows 网络中的文件和打印服务器了。</p>
-<p>8.2.2 图形化界面配置 samba 服务器1、访问 Samba 服务器配置工具</p>
+<h3 id="8-2-2-图形化界面配置-samba-服务器"><a href="#8-2-2-图形化界面配置-samba-服务器" class="headerlink" title="8.2.2 图形化界面配置 samba 服务器"></a>8.2.2 图形化界面配置 samba 服务器</h3><p>1、访问 Samba 服务器配置工具</p>
 <p>依次单击“主菜单→系统设置→服务器设置→Samba 服务器”，即可打开 Samba 服务器配置窗口。注意：</p>
 <p>\1. 必须以 root 用户身份才可以对 Samba 服务器进行配置。</p>
 <p>\2. 也可以在终端窗口输入 redhat-config-samba 命令打开配置窗口。2、进行服务器设置</p>
@@ -1025,7 +964,7 @@
 <p>确定后一个新用户就建立好了，添加共享目录时就可以分配每个用户的访问目录来。5、从Windows 访问 Samba 服务器</p>
 <p>须启动 Samba 服务。打开一个终端窗口，键入“service smb start”命令，即可出现以下提示信息， 表示 Samba 服务已经启动：</p>
 <p># service smb start 启动 SMB 服务 [确定] 启动 NMB 服务 [确定]</p>
-<p>8.2.3 文本界面下配置 samba 服务器1、samba 相关</p>
+<h3 id="8-2-3-文本界面下配置-samba-服务器"><a href="#8-2-3-文本界面下配置-samba-服务器" class="headerlink" title="8.2.3 文本界面下配置 samba 服务器"></a>8.2.3 文本界面下配置 samba 服务器</h3><p>1、samba 相关</p>
 <p>后台进程：smbd，nmbd</p>
 <p>使用端口：137，138，139</p>
 <p>所需RPM 包：samba，samba-common，samba-client 相关 RPM 包：samba-swat</p>
@@ -1049,16 +988,14 @@
 <p>配置用户级别的 samba example：</p>
 <p>security = user</p>
 <p>#smbpasswd -a jake 共享访问用户为 jake password:    共享访问密码为<em>*</em></p>
-<p>8.3  windows 和 linux 下的共享互访linux 访问 windows</p>
+<h2 id="8-3-windows-和-linux-下的共享互访linux"><a href="#8-3-windows-和-linux-下的共享互访linux" class="headerlink" title="8.3  windows 和 linux 下的共享互访linux"></a>8.3  windows 和 linux 下的共享互访linux</h2><p>访问 windows</p>
 <p>1、使用 mount</p>
 <p>mount  windowsIP 地址/共享名  本机目录  -o  username=用户名2、mount.cifs</p>
 <p>mount.cifs  windowsIP 地址/共享名  本机目录  -o  username=用户名3、使用 mount 加参数 -t cifs</p>
 <p>mount  windowsIP 地址/共享名  本机目录  -o  username=用户名4、使用 sambaclient</p>
 <p>sambaclient windowsIP 地址/共享名 -U 用户名windows 访问 linux</p>
 <p>windows 访问 linux 与访问 windows 相同，使用 UNC 路径</p>
-<p>第九章. DHCP 服务器</p>
-<p>9.1.DHCP 服务器??</p>
-<p>1.DHCP（dynamic host configure protocol）动态主机配置协议最大的功能就是向客户端提供 TCP/IP 信息，使用的是 UDP:67 端口2.手动设定适合：适用小型网络</p>
+<h1 id="第九章-DHCP-服务器"><a href="#第九章-DHCP-服务器" class="headerlink" title="第九章. DHCP 服务器"></a>第九章. DHCP 服务器</h1><h2 id="9-1-DHCP-服务器"><a href="#9-1-DHCP-服务器" class="headerlink" title="9.1.DHCP 服务器??"></a>9.1.DHCP 服务器??</h2><p>1.DHCP（dynamic host configure protocol）动态主机配置协议最大的功能就是向客户端提供 TCP/IP 信息，使用的是 UDP:67 端口2.手动设定适合：适用小型网络</p>
 <p>\3. 手动输入 IP 地址和自动获取比较优缺点</p>
 <p>\4. DHCP 服务器的功能：</p>
 <p>对客户机动态分配 TCP/IP 信息 IP 地址、 子网掩码、默认网关、首选 DNS 服务器… 安全而又可靠的设置 IP 地址</p>
@@ -1070,7 +1007,7 @@
 <p>2、DHCPOFFER 包     SERVER 回应 假设某台快  响应</p>
 <p>3、DHCPREQUEST 包    选择 IP 确认        选择</p>
 <p>4、DHCPPACK 包     广播确认给客户使用    确认</p>
-<p>9.2 linux 下的 DHCP 1、dhcp 的主配置文件</p>
+<h2 id="9-2-linux-下的-DHCP"><a href="#9-2-linux-下的-DHCP" class="headerlink" title="9.2 linux 下的 DHCP"></a>9.2 linux 下的 DHCP</h2><p>1、dhcp 的主配置文件</p>
 <p>/etc/dhcpd.conf</p>
 <p>2、dhcp 网卡配置文件</p>
 <p>/etc/sysconfig/dhcpd</p>
@@ -1100,9 +1037,7 @@
 </tbody>
 </table>
 </div>
-<p>9.3 /etc/dhcpd.conf</p>
-<p>9.3.1 dhcpd.conf 文件</p>
-<p>在 redhat Enterprise linux5 中，默认是空文件，配置文件存放在/usr/share/doc/dhcp- 3.05/dhcpd.conf.sample</p>
+<h2 id="9-3-etc-dhcpd-conf"><a href="#9-3-etc-dhcpd-conf" class="headerlink" title="9.3 /etc/dhcpd.conf"></a>9.3 /etc/dhcpd.conf</h2><h3 id="9-3-1-dhcpd-conf-文件"><a href="#9-3-1-dhcpd-conf-文件" class="headerlink" title="9.3.1 dhcpd.conf 文件"></a>9.3.1 dhcpd.conf 文件</h3><p>在 redhat Enterprise linux5 中，默认是空文件，配置文件存放在/usr/share/doc/dhcp- 3.05/dhcpd.conf.sample</p>
 <p>#cp /usr/share/doc/dhcp-3.05/dhcpd.conf.sample /etc/dhcpd.conf 将配置文件拷贝到/etc 下，并覆盖 dhcp.conf</p>
 <p>配置文件各字段说明</p>
 <p>subnet X.X.X.X netmask X.X.X.X</p>
@@ -1130,9 +1065,7 @@
 <p>example： host joe {</p>
 <p>hardware ethernet 08:00:2b:4c:29:32; 指定主机的 MAC 地址fixed-address 192.168.103.211;  为指定主机分配域名option host-name “joe”;     为绑定主机起名</p>
 <p>}</p>
-<p>第十章. DNS 服务器</p>
-<p>10.1 DNS 服务器介绍</p>
-<p>DNS domain name system 域名系统</p>
+<h1 id="第十章-DNS-服务器"><a href="#第十章-DNS-服务器" class="headerlink" title="第十章. DNS 服务器"></a>第十章. DNS 服务器</h1><h2 id="10-1-DNS-服务器介绍"><a href="#10-1-DNS-服务器介绍" class="headerlink" title="10.1 DNS 服务器介绍"></a>10.1 DNS 服务器介绍</h2><p>DNS domain name system 域名系统</p>
 <p>1、网络中，计算机通过 IP 地址来通信IP 地址记忆困难，为计算机起个好名字域名概念的提出</p>
 <p>DNS 服务：为主机建立 IP 地址与域名之间的映射关系，使用域名来唯一标识网络中的计算机2、域名称的结构</p>
 <p>根域</p>
@@ -1146,9 +1079,7 @@
 <p>域名查询的模式从查询方式上分递归查询</p>
 <p>简单（迭代）查询</p>
 <p>从查询内容上分正向搜索查询反向搜索查询</p>
-<p>10.2 linux 下的 DNS</p>
-<p>10.2.1 DNS 相关配置文件介绍服务器端 BIND</p>
-<p>/etc/hosts</p>
+<h2 id="10-2-linux-下的-DNS"><a href="#10-2-linux-下的-DNS" class="headerlink" title="10.2 linux 下的 DNS"></a>10.2 linux 下的 DNS</h2><h3 id="10-2-1-DNS-相关配置文件介绍服务器端-BIND"><a href="#10-2-1-DNS-相关配置文件介绍服务器端-BIND" class="headerlink" title="10.2.1 DNS 相关配置文件介绍服务器端 BIND"></a>10.2.1 DNS 相关配置文件介绍服务器端 BIND</h3><p>/etc/hosts</p>
 <p>/etc/resolv.conf 配置 DNS 服务器地址</p>
 <p>/etc/named.caching-nameserver.conf DNS 的主配置文件</p>
 <p>/etc/named.rfc1912.zones DNS 的区域声明存储配置文件</p>
@@ -1157,16 +1088,14 @@
 <p>/var/named/chroot/var/named查询记录数据库存放目录</p>
 <p>/var/named/chroot/var/named/slaves</p>
 <p>辅助 DNS 的数据库目录</p>
-<p>10.2.2 DNS 服务和安装1、查看安装的 DNS 组件#rpm -qa |grep bind</p>
+<h3 id="10-2-2-DNS-服务和安装"><a href="#10-2-2-DNS-服务和安装" class="headerlink" title="10.2.2 DNS 服务和安装"></a>10.2.2 DNS 服务和安装</h3><p>1、查看安装的 DNS 组件#rpm -qa |grep bind</p>
 <p>2、安装 DNS 服务缺少的软件包</p>
 <p>caching-nameserver-9.3.3-7.el5.i386.rpm包存放的位置，在安装光盘 Server 目录下</p>
 <p>3、DNS 服务</p>
 <p>service named start service named stop service named restart</p>
 <p>4、配置本机的 DNS 服务器地址#vi /etc/resolv.conf nameserver 200.200.200.1</p>
 <p>5、配置的加载#rndc reload</p>
-<p>10.3 配置主 DNS 服务器</p>
-<p>10.3.1 编辑配置文件/etc/named.caching-nameserver.conf 字段解释</p>
-<p>options {</p>
+<h2 id="10-3-配置主-DNS-服务器"><a href="#10-3-配置主-DNS-服务器" class="headerlink" title="10.3 配置主 DNS 服务器"></a>10.3 配置主 DNS 服务器</h2><h3 id="10-3-1-编辑配置文件-etc-named-caching-nameserver-conf-字段解释"><a href="#10-3-1-编辑配置文件-etc-named-caching-nameserver-conf-字段解释" class="headerlink" title="10.3.1 编辑配置文件/etc/named.caching-nameserver.conf 字段解释"></a>10.3.1 编辑配置文件/etc/named.caching-nameserver.conf 字段解释</h3><p>options {</p>
 <p>listen-on port 53 { 200.200.200.1; }; 监听指定主机的 53 号端口（ipv4） # listen-on-v6 port 53 { ::1; };    监听指定主机的 53 号端口（ipv6）</p>
 <p>directory “/var/named”;</p>
 <p>dump-file “/var/named/data/cache_dump.db”; statistics-file “/var/named/data/named_stats.txt”;</p>
@@ -1185,7 +1114,7 @@
 <p>recursion yes;</p>
 <p>include “/etc/named.rfc1912.zones”;  指定包含的区域声明文件</p>
 <p>};</p>
-<p>10.3.2  编辑配置文件 /etc/named.rfc1912.zones 增加 2 个字段：字段含义</p>
+<h3 id="10-3-2-编辑配置文件-etc-named-rfc1912-zones"><a href="#10-3-2-编辑配置文件-etc-named-rfc1912-zones" class="headerlink" title="10.3.2  编辑配置文件 /etc/named.rfc1912.zones"></a>10.3.2  编辑配置文件 /etc/named.rfc1912.zones</h3><p>增加 2 个字段：字段含义</p>
 <p>zone “baidu.com” IN {        声明正向区域</p>
 <p>type master;          定义类型为主服务器</p>
 <p>file “baidu.com.zone”;      指定正向数据库文件</p>
@@ -1196,10 +1125,8 @@
 <p>file “baidu.com.local”;     指定反向区域文件</p>
 <p>allow-update { none; };     允许更新的主机</p>
 <p>};</p>
-<p>10.3.3 进入 DNS 数据库目录</p>
-<p>cd /var/named/chroot/var/named</p>
-<p>10.3.4 生成反向解析文件</p>
-<p>cp named.local baidu.com.local 反向解析文件vi baidu.com.local</p>
+<h3 id="10-3-3-进入-DNS-数据库目录"><a href="#10-3-3-进入-DNS-数据库目录" class="headerlink" title="10.3.3 进入 DNS 数据库目录"></a>10.3.3 进入 DNS 数据库目录</h3><p>cd /var/named/chroot/var/named</p>
+<h3 id="10-3-4-生成反向解析文件"><a href="#10-3-4-生成反向解析文件" class="headerlink" title="10.3.4 生成反向解析文件"></a>10.3.4 生成反向解析文件</h3><p>cp named.local baidu.com.local 反向解析文件vi baidu.com.local</p>
 <p>$TTL      86400</p>
 <p>@    IN   SOA   <a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com.</a> <a target="_blank" rel="noopener" href="http://www.baidu.com/">root.www.baidu.com.</a> ( 指定主机名</p>
 <p>1997022700 ; Serial</p>
@@ -1249,8 +1176,7 @@
 </tbody>
 </table>
 </div>
-<p>10.3.5 生成正向解析文件</p>
-<p>cp baidu.com.local baidu.com.zone vi baidu.com.zone</p>
+<h3 id="10-3-5-生成正向解析文件"><a href="#10-3-5-生成正向解析文件" class="headerlink" title="10.3.5 生成正向解析文件"></a>10.3.5 生成正向解析文件</h3><p>cp baidu.com.local baidu.com.zone vi baidu.com.zone</p>
 <p>$TTL      86400</p>
 <p>@    IN   SOA   <a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com.</a> <a target="_blank" rel="noopener" href="http://www.baidu.com/">root.www.baidu.com.</a> (</p>
 <p>1997022700 ; Serial</p>
@@ -1300,16 +1226,13 @@
 </tbody>
 </table>
 </div>
-<p>10.3.6 DNS 常用记录和 DNS 的泛域名解析</p>
-<p>A    主机记录CNAME    别名记录</p>
+<h3 id="10-3-6-DNS-常用记录和-DNS-的泛域名解析"><a href="#10-3-6-DNS-常用记录和-DNS-的泛域名解析" class="headerlink" title="10.3.6 DNS 常用记录和 DNS 的泛域名解析"></a>10.3.6 DNS 常用记录和 DNS 的泛域名解析</h3><p>A    主机记录CNAME    别名记录</p>
 <p>MX   邮件交换器记录</p>
 <p>PTR   指针记录</p>
 <p>*  别名记录可以实现泛名解析</p>
-<p>10.3.7 修改数据库文件的属主和属组</p>
-<p>创建的文件的属组和属主为 root，对 named 服务来说是没有权限的，需要将数据库文件的属主和属组修改为虚拟用户 named</p>
+<h3 id="10-3-7-修改数据库文件的属主和属组"><a href="#10-3-7-修改数据库文件的属主和属组" class="headerlink" title="10.3.7 修改数据库文件的属主和属组"></a>10.3.7 修改数据库文件的属主和属组</h3><p>创建的文件的属组和属主为 root，对 named 服务来说是没有权限的，需要将数据库文件的属主和属组修改为虚拟用户 named</p>
 <p>chown named.named baidu.com.zone chown named.named baidu.com.local</p>
-<p>10.3.8 使用本机和客户端测试</p>
-<p>host 命令和 nslookup 命令</p>
+<h3 id="10-3-8-使用本机和客户端测试"><a href="#10-3-8-使用本机和客户端测试" class="headerlink" title="10.3.8 使用本机和客户端测试"></a>10.3.8 使用本机和客户端测试</h3><p>host 命令和 nslookup 命令</p>
 <p>10.4 配置 DNS 的简单负载均衡</p>
 <p>在 DNS 的正向文件中添加一条记录</p>
 <div class="table-container">
@@ -1335,14 +1258,11 @@
 <p>在 DNS 的反向文件中添加一条记录</p>
 <p>1   IN  PTR <a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a></p>
 <p>11   IN  PTR <a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a></p>
-<p>10.5 配置 DNS 的转发器</p>
-<p>编辑配置文件/etc/named.caching-nameserver.conf 增加一条记录</p>
+<h2 id="10-5-配置-DNS-的转发器"><a href="#10-5-配置-DNS-的转发器" class="headerlink" title="10.5 配置 DNS 的转发器"></a>10.5 配置 DNS 的转发器</h2><p>编辑配置文件/etc/named.caching-nameserver.conf 增加一条记录</p>
 <p>options {</p>
 <p>listen-on port 53 { 200.200.200.1; }; 监听指定主机的 53 号端口（ipv4） forwarders {200.200.200.2；}； 添加转发 DNS 服务地址为 200.200.200.2</p>
 <p>#     listen-on-v6 port 53 { ::1; };    监听指定主机的 53 号端口（ipv6）</p>
-<p>10.6 配置辅助 DNS 服务器</p>
-<p>10.6.1 主 DNS 服务器中的配置</p>
-<p>zone “baidu.com” IN {        声明正向区域</p>
+<h2 id="10-6-配置辅助-DNS-服务器"><a href="#10-6-配置辅助-DNS-服务器" class="headerlink" title="10.6 配置辅助 DNS 服务器"></a>10.6 配置辅助 DNS 服务器</h2><h3 id="10-6-1-主-DNS-服务器中的配置"><a href="#10-6-1-主-DNS-服务器中的配置" class="headerlink" title="10.6.1 主 DNS 服务器中的配置"></a>10.6.1 主 DNS 服务器中的配置</h3><p>zone “baidu.com” IN {        声明正向区域</p>
 <p>type master;          定义类型为主服务器</p>
 <p>file “baidu.com.zone”;      指定正向数据库文件</p>
 <p>allow-update { 200.200.200.2; }; 允许更新 200.200.200.2 进行区域复制</p>
@@ -1352,27 +1272,22 @@
 <p>file “baidu.com.local”;     指定反向区域文件</p>
 <p>allow-update { 200.200.200.2; }; 允许更新 200.200.200.2 进行区域复制</p>
 <p>};</p>
-<p>10.6.2 辅助 DNS 配置</p>
-<p>编辑配置文件 /etc/named.rfc1912.zones</p>
+<h3 id="10-6-2-辅助-DNS-配置"><a href="#10-6-2-辅助-DNS-配置" class="headerlink" title="10.6.2 辅助 DNS 配置"></a>10.6.2 辅助 DNS 配置</h3><p>编辑配置文件 /etc/named.rfc1912.zones</p>
 <p>zone “huayu.com” IN {         声明正向区域 type slave;          指定服务类型为辅助file “slaves/huayu.com.zone”; 指定正向区域文件masters{200.200.200.2;};    指定主 DNS 服务器地址#   allow-update { none; };</p>
 <p>};</p>
 <p>zone “200.200.200.in-addr.arpa” IN {  声明反响区域</p>
 <p>type slave;           指定服务器类型为辅助file “slaves/huayu.com.local”; 指定反向文件masters{200.200.200.2;};     指定主 DNS 服务器地址#   allow-update { none; };</p>
 <p>};</p>
-<p>第十一章 Apache 服务器</p>
-<p>11.1 http 服务原理</p>
-<p>http 超文本传送协议      80 端口https 安全的超文本传输协议               443 端口基于 C/S(客户端/服务端)模型</p>
+<h1 id="第十一章-Apache-服务器"><a href="#第十一章-Apache-服务器" class="headerlink" title="第十一章 Apache 服务器"></a>第十一章 Apache 服务器</h1><h2 id="11-1-http-服务原理"><a href="#11-1-http-服务原理" class="headerlink" title="11.1 http 服务原理"></a>11.1 http 服务原理</h2><p>http 超文本传送协议      80 端口https 安全的超文本传输协议               443 端口基于 C/S(客户端/服务端)模型</p>
 <p>协议流程：</p>
 <p>连接：客户端与服务端建立连接</p>
 <p>请求：客户端向服务端发送请求</p>
 <p>应答：服务端响应，将结果传给客户端关闭：执行结束后关闭</p>
-<p>11.2 Apache 服务器介绍</p>
-<p>Apache 是常见的支持 HTTP 协议的 Web 服务器之一，也是使用最广泛的 Web 服务器。截止到今年 1 月，</p>
+<h2 id="11-2-Apache-服务器介绍"><a href="#11-2-Apache-服务器介绍" class="headerlink" title="11.2 Apache 服务器介绍"></a>11.2 Apache 服务器介绍</h2><p>Apache 是常见的支持 HTTP 协议的 Web 服务器之一，也是使用最广泛的 Web 服务器。截止到今年 1 月，</p>
 <p>世界上大约有超过 500 万台 Internet 服务器使用的是 Apache Server。</p>
 <p>Apache Server 的主要特点是稳定性高、速度快、功能多。通过第三方的评测，Apache Server 比大多数的Web 服务器都快。</p>
 <p>Apache 服务器既是一种软件，又是一个工程。它是由千千万万的服务器代码和文档开发者共同努力的结果。在 1995 年 4 月，公开发行了第一套 Apache Server，版本号是 0.6.2。Apache Server 的名字来源于“A PatCHy Server”。</p>
-<p>11.2.1 Apache——A Patchy Server</p>
-<p>特点：</p>
+<h3 id="11-2-1-Apache——A-Patchy-Server"><a href="#11-2-1-Apache——A-Patchy-Server" class="headerlink" title="11.2.1 Apache——A Patchy Server"></a>11.2.1 Apache——A Patchy Server</h3><p>特点：</p>
 <p>支持最新的 HTTP1.1 协议。</p>
 <p>支持 PHP、CGI、Java Servlets 和 FastCGI。</p>
 <p>支持安全 Socket 层。</p>
@@ -1382,15 +1297,13 @@
 <p>Apache 的主要特点：</p>
 <p>支持进程控制：在需要前自动复制进程，进程数量自动使用需求支持动态加载模块：不需重编译就可扩展其用途</p>
 <p>支持虚拟主机：允许使用一台 web 服务器提供多个 web 站点的共享</p>
-<p>11.2.2 APACHE 相关文件</p>
-<p>配置文件：/etc/httpd/conf/httpd.conf 服务器的根目录：/etc/httpd</p>
+<h3 id="11-2-2-APACHE-相关文件"><a href="#11-2-2-APACHE-相关文件" class="headerlink" title="11.2.2 APACHE 相关文件"></a>11.2.2 APACHE 相关文件</h3><p>配置文件：/etc/httpd/conf/httpd.conf 服务器的根目录：/etc/httpd</p>
 <p>根文档目录：/var/www/html</p>
 <p>访问日至文件：/var/log/httpd/access_log 错误日至文件：/var/log/httpd/error_log 运行 Apache 的用户：apache</p>
 <p>运行 Apache 的组：apache</p>
 <p>端口：80</p>
 <p>模块存放路径：/usr/lib/httpd/modules</p>
-<p>11.2.3 文件系统容器和网络空间容器文件系统容器</p>
-<Directory>和<Files>是针对文件系统的指令。<Directory>段中的指令作用于指定的文件系统目录及其所有子目录，.htaccess 文件可以达到同样的效果。
+<h3 id="11-2-3-文件系统容器和网络空间容器文件系统容器"><a href="#11-2-3-文件系统容器和网络空间容器文件系统容器" class="headerlink" title="11.2.3 文件系统容器和网络空间容器文件系统容器"></a>11.2.3 文件系统容器和网络空间容器文件系统容器</h3><Directory>和<Files>是针对文件系统的指令。<Directory>段中的指令作用于指定的文件系统目录及其所有子目录，.htaccess 文件可以达到同样的效果。
 
 网络空间容器
 
@@ -1402,7 +1315,7 @@
 
 
 
-11.2.4 Apache 的进程和服务apache 的进程---httpd
+### 11.2.4 Apache 的进程和服务apache 的进程---httpd
 
 apache 的启动 service  httpd  start
 
@@ -1414,9 +1327,9 @@ apache 的重新启动 service  httpd  restart
 
 
 
-11.3 创建个人主页
+## 11.3 创建个人主页
 
-11.3.1 主配置文件介绍
+### 11.3.1 主配置文件介绍
 
 各字段介绍：
 
@@ -1480,7 +1393,7 @@ AllowOverride：加 None 参数表示任何人都可以浏览该目录下的文�
 
 
 
-11.3.2 编辑主配置文件
+### 11.3.2 编辑主配置文件
 
 vi /etc/http/conf/httpd.conf 第(354 行)
 
@@ -1512,24 +1425,18 @@ Deny from all
 
 
 
-<p>11.3.3 启动或重启 Apache 服务service httpd start（restart）</p>
-<p>11.3.4 创建自己的个人主页1、添加用户</p>
+<h3 id="11-3-3-启动或重启-Apache-服务service-httpd-start（restart）"><a href="#11-3-3-启动或重启-Apache-服务service-httpd-start（restart）" class="headerlink" title="11.3.3 启动或重启 Apache 服务service httpd start（restart）"></a>11.3.3 启动或重启 Apache 服务service httpd start（restart）</h3><h3 id="11-3-4-创建自己的个人主页"><a href="#11-3-4-创建自己的个人主页" class="headerlink" title="11.3.4 创建自己的个人主页"></a>11.3.4 创建自己的个人主页</h3><p>1、添加用户</p>
 <p>useradd user</p>
 <p>2、切换用户,并进入用户主目录su - user</p>
 <p>3、创建文档目录,建立测试页,添加执行权限mkdir public_html  创建文档目录,</p>
 <p>vi public_html/index.html 建立测试页,</p>
 <p>cd /home</p>
 <p>chmod 711 user 添加执行权限</p>
-<p>11.3.5 使用浏览器测试</p>
-<p>在浏览器中 <a target="_blank" rel="noopener" href="http://域名或者">http://域名或者</a> IP 地址/~用户名example：</p>
+<h3 id="11-3-5-使用浏览器测试"><a href="#11-3-5-使用浏览器测试" class="headerlink" title="11.3.5 使用浏览器测试"></a>11.3.5 使用浏览器测试</h3><p>在浏览器中 <a target="_blank" rel="noopener" href="http://域名或者">http://域名或者</a> IP 地址/~用户名example：</p>
 <p><a target="_blank" rel="noopener" href="http://www.baidu.com/~user">http://www.baidu.com/~user</a></p>
-<p>11.4 发布默认站点下目录的内容</p>
-<p>11.4.1 进入默认根文档目录并新建目录cd /var/www/html</p>
-<p>mkdir 目录</p>
-<p>11.4.2 在新建的目录下生成测试文件和测试目录touch 文件名</p>
-<p>mkdir 目 录</p>
-<p>11.4.3 编辑主配置文件</p>
-<p>vi /etc/httpd/conf/httpd.conf</p>
+<h2 id="11-4-发布默认站点下目录的内容"><a href="#11-4-发布默认站点下目录的内容" class="headerlink" title="11.4 发布默认站点下目录的内容"></a>11.4 发布默认站点下目录的内容</h2><h3 id="11-4-1-进入默认根文档目录并新建目录cd-var-www-html"><a href="#11-4-1-进入默认根文档目录并新建目录cd-var-www-html" class="headerlink" title="11.4.1 进入默认根文档目录并新建目录cd /var/www/html"></a>11.4.1 进入默认根文档目录并新建目录cd /var/www/html</h3><p>mkdir 目录</p>
+<h3 id="11-4-2-在新建的目录下生成测试文件和测试目录touch-文件名"><a href="#11-4-2-在新建的目录下生成测试文件和测试目录touch-文件名" class="headerlink" title="11.4.2 在新建的目录下生成测试文件和测试目录touch 文件名"></a>11.4.2 在新建的目录下生成测试文件和测试目录touch 文件名</h3><p>mkdir 目 录</p>
+<h3 id="11-4-3-编辑主配置文件"><a href="#11-4-3-编辑主配置文件" class="headerlink" title="11.4.3 编辑主配置文件"></a>11.4.3 编辑主配置文件</h3><p>vi /etc/httpd/conf/httpd.conf</p>
 <p>使用文件系统容器生成文件指定目录位置</p>
 <Directory var www html redhat>
 
@@ -1539,10 +1446,7 @@ Options Indexes
 
 
 
-<p>11.4.5 重新启动服务器并测试service httpd restart <a target="_blank" rel="noopener" href="http://www.baidu.com/redhat">http://www.baidu.com/redhat</a></p>
-<p>11.5  配置目录访问控制</p>
-<p>11.5.1 访问控制指令</p>
-<p>order 顺序,设定拒绝和允许的先后顺序deny  拒绝</p>
+<h3 id="11-4-5-重新启动服务器并测试service-httpd-restart-http-www-baidu-com-redhat"><a href="#11-4-5-重新启动服务器并测试service-httpd-restart-http-www-baidu-com-redhat" class="headerlink" title="11.4.5 重新启动服务器并测试service httpd restart http://www.baidu.com/redhat"></a>11.4.5 重新启动服务器并测试service httpd restart <a target="_blank" rel="noopener" href="http://www.baidu.com/redhat">http://www.baidu.com/redhat</a></h3><h2 id="11-5-配置目录访问控制"><a href="#11-5-配置目录访问控制" class="headerlink" title="11.5  配置目录访问控制"></a>11.5  配置目录访问控制</h2><h3 id="11-5-1-访问控制指令"><a href="#11-5-1-访问控制指令" class="headerlink" title="11.5.1 访问控制指令"></a>11.5.1 访问控制指令</h3><p>order 顺序,设定拒绝和允许的先后顺序deny  拒绝</p>
 <p>allow 允 许</p>
 <p>example：</p>
 <p>order deny,allow  拒绝所有的访问,除去明确允许的</p>
@@ -1556,8 +1460,7 @@ Options Indexes
 <p>可以是 IP 地址,如 192.168.10.x,或者 192.168.10 或者 192.168.1.0/255.255.255.0 或者</p>
 <p>192.168.10.0/24</p>
 <p>可以是域名,如 aaa.bbb ；All 代表所有的</p>
-<p>11.5.2 对站点进行访问控制设置编辑主配置文件</p>
-<p>拒绝优先</p>
+<h3 id="11-5-2-对站点进行访问控制设置编辑主配置文件"><a href="#11-5-2-对站点进行访问控制设置编辑主配置文件" class="headerlink" title="11.5.2 对站点进行访问控制设置编辑主配置文件"></a>11.5.2 对站点进行访问控制设置编辑主配置文件</h3><p>拒绝优先</p>
 <Directory var www html redhat>
 
 Options Indexes Order deny，allow Deny from all
@@ -1578,11 +1481,9 @@ Deny from 200.200.200.200   只拒绝 200.200.200.200
 
 
 <p>重启服务器测试</p>
-<p>11.6 配置认证指令AuthName 认证名字AuthType 认证类型,有两种</p>
-<p>Basic,基本认证类型,所有浏览器均支持</p>
+<h2 id="11-6-配置认证指令AuthName-认证名字AuthType-认证类型-有两种"><a href="#11-6-配置认证指令AuthName-认证名字AuthType-认证类型-有两种" class="headerlink" title="11.6 配置认证指令AuthName 认证名字AuthType 认证类型,有两种"></a>11.6 配置认证指令AuthName 认证名字AuthType 认证类型,有两种</h2><p>Basic,基本认证类型,所有浏览器均支持</p>
 <p>Digest,摘要认证类型,部分浏览器不支持AuthUserFile 认证用户文件,存放认证用户的列表文件Require   valid-user  授权给通过认证的所有用户Require   user 用户名 授权给通过认证的指定用户</p>
-<p>11.6.1 在主配置文件中添加授权认证的指令</p>
-<Directory var www html redhat>
+<h3 id="11-6-1-在主配置文件中添加授权认证的指令"><a href="#11-6-1-在主配置文件中添加授权认证的指令" class="headerlink" title="11.6.1 在主配置文件中添加授权认证的指令"></a>11.6.1 在主配置文件中添加授权认证的指令</h3><Directory var www html redhat>
 
 Options Indexes
 
@@ -1596,13 +1497,11 @@ Require valid-user 授权给通过认证的所有用户
 
 
 
-<p>11.6.2 生成认证授权文件，并添加用户</p>
-<p>#htpasswd -c /etc/httpd/认证文件 用户名</p>
+<h3 id="11-6-2-生成认证授权文件，并添加用户"><a href="#11-6-2-生成认证授权文件，并添加用户" class="headerlink" title="11.6.2 生成认证授权文件，并添加用户"></a>11.6.2 生成认证授权文件，并添加用户</h3><p>#htpasswd -c /etc/httpd/认证文件 用户名</p>
 <p>11.6.3 更改认证授权文件的属主和属组为 apache #chown apache.apache /etc/httpd/认证文件</p>
 <p>11.6.4 重新启动 apache 服务#service httpd restart</p>
 <p>11.6.5 访问测试</p>
-<p>11.7 访问控制、认证授权的综合指令</p>
-<p>11.7.1 两种综合情况</p>
+<h3 id="11-7-访问控制、认证授权的综合指令"><a href="#11-7-访问控制、认证授权的综合指令" class="headerlink" title="11.7 访问控制、认证授权的综合指令"></a>11.7 访问控制、认证授权的综合指令</h3><p>11.7.1 两种综合情况</p>
 <p>1、满足一种条件即可访问Satisfy     any</p>
 <p>或者满足访问控制的条件，或者满足认证授权的条件，就可以访问指定页面、目录2、必须同时满足 2 个条件才能访问</p>
 <p>Satisfy all</p>
@@ -1624,8 +1523,7 @@ AuthName “rz” AuthType Basic AuthUserFile file2 Require valid-user Satisfy a
 <p>htdigest  -c  /etc/httpd/认证文件 认证名 用户名</p>
 <p>11.7.4 更改认证文件的属主和属组为 apache chown apache.apache /etc/httpd/file2</p>
 <p>11.7.5 重启服务并测试</p>
-<p>11.8 分割指令</p>
-<p>1、Include  目录/文件名.conf</p>
+<h2 id="11-8-分割指令"><a href="#11-8-分割指令" class="headerlink" title="11.8 分割指令"></a>11.8 分割指令</h2><p>1、Include  目录/文件名.conf</p>
 <p>apache 启动时,同时加载 Include 指令指定的目录下的以.conf 结尾的文件，可以减少 apache 的主配置文件的容量</p>
 <p>2、.htaccess 目录下的隐藏文件可以减少 apache 服务的启动</p>
 <p>11.8.1 include</p>
@@ -1633,14 +1531,12 @@ AuthName “rz” AuthType Basic AuthUserFile file2 Require valid-user Satisfy a
 <p>在指定目录中生成文件并发布</p>
 <p>/etc/httpd/conf.d/</p>
 <p>然后测试</p>
-<p>11.9 .htaccess</p>
-<p>11.9.1 在主配置文件中发布目录,添加使用.htaccess 的指令</p>
+<h2 id="11-9-htaccess"><a href="#11-9-htaccess" class="headerlink" title="11.9 .htaccess"></a>11.9 .htaccess</h2><p>11.9.1 在主配置文件中发布目录,添加使用.htaccess 的指令</p>
 <p>增加一行Allowoverride All</p>
 <p>11.9.2 在指定目录中生成.htaccess 文件,并添加指令</p>
 <p>在发布目录/var/www/html/redhat5 下生成.htaccess 文件</p>
 <p>11.9.3 重新启动 apache 服务测试</p>
-<p>11.10 虚拟主机</p>
-<p>11.10.1 虚拟主机常用命令</p>
+<h2 id="11-10-虚拟主机"><a href="#11-10-虚拟主机" class="headerlink" title="11.10 虚拟主机"></a>11.10 虚拟主机</h2><p>11.10.1 虚拟主机常用命令</p>
 <p>1、<VirtualHost>和</VirtualHost></p>
 <p>用于封装一组仅作用于特定虚拟主机的指令。2、NameVirtualHost</p>
 <p>指定一个基于域名的虚拟主机将使用哪个 IP 地址来接受请求。3、ServerName</p>
@@ -1663,8 +1559,7 @@ DocumentRoot /vdir/2345
 <p>2、建立虚拟主机的根文档目录，生成测试页mkdir -p /vdir/1234</p>
 <p>mkdir /vdir/2345</p>
 <p>echo “这是端口为 1234 的主页！”&gt;/vdir/1234/index.html echo “这是端口为 2345 的主页！”&gt;/vdir/2345/index.html 3、重新启动服务并测试</p>
-<p>11.11 配置基于 IP 的虚拟主机</p>
-<p>1、添加网卡（虚拟网卡或真实网卡）</p>
+<h2 id="11-11-配置基于-IP-的虚拟主机"><a href="#11-11-配置基于-IP-的虚拟主机" class="headerlink" title="11.11 配置基于 IP 的虚拟主机"></a>11.11 配置基于 IP 的虚拟主机</h2><p>1、添加网卡（虚拟网卡或真实网卡）</p>
 <p>2、编辑主配置文件，添加虚拟主机指令</p>
 <VirtualHost 200.200.200.1> DocumentRoot /vdir/1
 
@@ -1677,8 +1572,7 @@ DocumentRoot /vdir/2345
 <p>3、建立虚拟主机的根文档目录，生成测试页mkdir /vdir/1</p>
 <p>mkdir /vdir/2</p>
 <p>echo “这是端口为 1 的主页！”&gt;/vdir/1/index.html echo “这是端口为 2 的主页！”&gt;/vdir/2/index.html 4、重新启动服务并测试</p>
-<p>11.12 配置基于域名的虚拟主机</p>
-<p>配置基于域名的虚拟主机必须需要 DNS 的支持1、配置 DNS</p>
+<h2 id="11-12-配置基于域名的虚拟主机"><a href="#11-12-配置基于域名的虚拟主机" class="headerlink" title="11.12 配置基于域名的虚拟主机"></a>11.12 配置基于域名的虚拟主机</h2><p>配置基于域名的虚拟主机必须需要 DNS 的支持1、配置 DNS</p>
 <p>2、在主配置文件中，添加虚拟主机指令NameVirtualHost 200.200.200.1</p>
 <VirtualHost 200.200.200.1> ServerName [www.huayu.com](http://www.huayu.com/) DocumentRoot /vdir/huayu
 
@@ -1698,7 +1592,7 @@ DocumentRoot /vdir/2345
 <p>mkdir /vdir/eduask mkdir /vdir/baidu</p>
 <p>echo “这是端口为 huayu 的主页！”&gt;/vdir/huayu/index.html echo “这是端口为 eduask 的主页！”&gt;/vdir/eduask/index.html echo “这是端口为 baidu 的主页！”&gt;/vdir/baidu/index.html</p>
 <p>4、重新启动服务并测试</p>
-<p>11.13 配置后台更新-WebDav 1、发布目录</p>
+<h2 id="11-13-配置后台更新-WebDav"><a href="#11-13-配置后台更新-WebDav" class="headerlink" title="11.13 配置后台更新-WebDav"></a>11.13 配置后台更新-WebDav</h2><p>1、发布目录</p>
 <p>2、在主配置文件中添加认证授权指令同时添加 Dav 指令</p>
 <Directory var www html redhat6>
 
@@ -1720,12 +1614,10 @@ Require valid-user
 <p>4、重启服务测试</p>
 <p>5、在服务器端给更新目录添加写的权限chmod o+w /var/www/html/redhat6</p>
 <p>更新测试</p>
-<p>第十四章.Mail 服务器</p>
-<p>14.1 Mail 服务器的组成1、电子邮局</p>
+<h1 id="第十二章-Mail-服务器"><a href="#第十二章-Mail-服务器" class="headerlink" title="第十二章.Mail 服务器"></a>第十二章.Mail 服务器</h1><h2 id="12-1-Mail-服务器的组成"><a href="#12-1-Mail-服务器的组成" class="headerlink" title="12.1 Mail 服务器的组成"></a>12.1 Mail 服务器的组成</h2><p>1、电子邮局</p>
 <p>2、电子邮件发送和接收系统</p>
 <p>3、MUA（邮件用户代理）和 MTA（邮件传输代理）</p>
-<p>14.2 Mail 系统相关协议</p>
-<p>1、SMTP 协议 简单邮件传输协议SMTP 协议使用 25 端口</p>
+<h2 id="12-2-Mail-系统相关协议"><a href="#12-2-Mail-系统相关协议" class="headerlink" title="12.2 Mail 系统相关协议"></a>12.2 Mail 系统相关协议</h2><p>1、SMTP 协议 简单邮件传输协议SMTP 协议使用 25 端口</p>
 <p>SMTP(Simple Mail Transfer Protocol)即简单邮件传输协议,它是一组用于由源地址到目的地址传送邮件的规则,由它来控制信件的中转方式。SMTP 协议属于 TCP／IP 协议族,它帮助每台计算机在发送或中转信件 时找到下一个目的地。通过 SMTP 协议所指定的服务器,我们就可以把 E－mail 寄到收信人的服务器上了,整 个过程只要几分钟。SMTP 服务器则是遵循 SMTP 协议的发送邮件服务器，用来发送或中转你发出的电子邮件。2、POP 协议 邮局协议</p>
 <p>POP3 协议使用 110 端口</p>
 <p>POP3 协议适用于不能时时在线的邮件用户。支持客户在服务器上租用信箱，然后利用 POP3 协议向服务器请</p>
@@ -1734,9 +1626,9 @@ Require valid-user
 <p>另一种从邮件服务器上获取邮件的协议，与 POP3 相比，支持在下载邮件前先行下载邮件头以预览邮件的主题来源，基于 TCP/IP</p>
 <p>POP 协议和 IMAP 协议的区别</p>
 <p>IMAP 提供摘要预览的功能，可以使用户很方便的删除垃圾邮件，而不把垃圾邮件下载到本地。</p>
-<p>14.3 sendmail 和 IMAP 包的检查与安装1、rpm -qa |grep sendmail</p>
+<h2 id="12-3-sendmail-和-IMAP-包的检查与安装"><a href="#12-3-sendmail-和-IMAP-包的检查与安装" class="headerlink" title="12.3 sendmail 和 IMAP 包的检查与安装"></a>12.3 sendmail 和 IMAP 包的检查与安装</h2><p>1、rpm -qa |grep sendmail</p>
 <p>2、rpm -qa |grep imap 3、rpm -qa |grep pop</p>
-<p>14.4 Mail 服务器相关文件1、mail 服务器的主目录</p>
+<h2 id="12-4-Mail-服务器相关文件"><a href="#12-4-Mail-服务器相关文件" class="headerlink" title="12.4 Mail 服务器相关文件"></a>12.4 Mail 服务器相关文件</h2><p>1、mail 服务器的主目录</p>
 <p>/etc/mail</p>
 <p>2、mail 服务器的主配置文件</p>
 <p>/etc/mail/sendmail.cf</p>
@@ -1744,13 +1636,10 @@ Require valid-user
 <p>/etc/dovecot.conf</p>
 <p>4、邮件服务器的启动/停止/重启service sendmail start service sendmail stop</p>
 <p>service sendmail restart</p>
-<p>14.5 编辑主配置文件/etc/mail/sendmail.cf vi /etc/mail/sendmail.cf</p>
-<p>将第 265 行的注释去掉DaemonPortOptions=Port=smtp，addr=0.0.0.0，Name=MTA启用邮件服务器功能</p>
+<h2 id="12-5-编辑主配置文件-etc-mail-sendmail-cf-vi-etc-mail-sendmail-cf"><a href="#12-5-编辑主配置文件-etc-mail-sendmail-cf-vi-etc-mail-sendmail-cf" class="headerlink" title="12.5 编辑主配置文件/etc/mail/sendmail.cf vi /etc/mail/sendmail.cf"></a>12.5 编辑主配置文件/etc/mail/sendmail.cf vi /etc/mail/sendmail.cf</h2><p>将第 265 行的注释去掉DaemonPortOptions=Port=smtp，addr=0.0.0.0，Name=MTA启用邮件服务器功能</p>
 <p>默认情况下，sendmail 服务器只侦听本地的连接，将 addr 字段修改为 0.0.0.0</p>
-<p>14.6 编辑/etc/mail/local-host-names</p>
-<p>对于服务器来说，要配置主机列表，来确定需要接收哪些邮件，不存在与列表中的主机名，将会拒绝接收。</p>
-<p>14.7 访问控制设置（/etc/mail/access）</p>
-<p>access 访问控制数据库用于定义接受或拒绝的邮件来源： 1、格式：</p>
+<h2 id="12-6-编辑-etc-mail-local-host-names"><a href="#12-6-编辑-etc-mail-local-host-names" class="headerlink" title="12.6 编辑/etc/mail/local-host-names"></a>12.6 编辑/etc/mail/local-host-names</h2><p>对于服务器来说，要配置主机列表，来确定需要接收哪些邮件，不存在与列表中的主机名，将会拒绝接收。</p>
+<h2 id="12-7-访问控制设置（-etc-mail-access）"><a href="#12-7-访问控制设置（-etc-mail-access）" class="headerlink" title="12.7 访问控制设置（/etc/mail/access）"></a>12.7 访问控制设置（/etc/mail/access）</h2><p>access 访问控制数据库用于定义接受或拒绝的邮件来源： 1、格式：</p>
 <p>IP/域名 设定值2、设定值：</p>
 <p>OK 接收 email，即使被其它规则拒绝了</p>
 <p>RELAY 允许通过该邮件主机 relay 的域。relay 意味着 OK</p>
@@ -1759,12 +1648,12 @@ Require valid-user
 <p>200.200.200.0 RELAY 允许为 200.200.200.0 这个子网的所有机器中继邮件</p>
 <p>3、配置好访问控制数据库文件后需要执行命令编译生成配置文件cd /etc/mail</p>
 <p>makemap hash access.db&lt;access service sendmail restart</p>
-<p>14.8 配置 Mail 服务器的客户端</p>
-<p>1、编辑客户端配置文件/etc/dovecot.conf 允许 POP3 IMAP 等协议vi /etc/dovecot.conf</p>
+<h2 id="12-8-配置-Mail-服务器的客户端"><a href="#12-8-配置-Mail-服务器的客户端" class="headerlink" title="12.8 配置 Mail 服务器的客户端"></a>12.8 配置 Mail 服务器的客户端</h2><p>1、编辑客户端配置文件/etc/dovecot.conf 允许 POP3 IMAP 等协议vi /etc/dovecot.conf</p>
 <p>第 17 行</p>
-<p>protocols = imap imaps pop3 pop3s 2、重新启动客户端服务</p>
+<p>protocols = imap imaps pop3 pop3s</p>
+<p> 2、重新启动客户端服务</p>
 <p>service dovecot restart</p>
-<p>14.9 进行 Mail 服务器的简单测试1、使用 mail 命令进行邮件编写格 式 ：mail <a href="mailto:jake@huayu.com">j</a><a href="mailto:ake@huayu.com">ake@huayu.com</a> subject：邮件主题</p>
+<h2 id="12-9-进行-Mail-服务器的简单测试"><a href="#12-9-进行-Mail-服务器的简单测试" class="headerlink" title="12.9 进行 Mail 服务器的简单测试"></a>12.9 进行 Mail 服务器的简单测试</h2><p>1、使用 mail 命令进行邮件编写格 式 ：mail <a href="mailto:jake@huayu.com">j</a><a href="mailto:ake@huayu.com">ake@huayu.com</a> subject：邮件主题</p>
 <p>编写邮件内容使用</p>
 <p>.</p>
 <p>Cc:</p>
@@ -1772,12 +1661,11 @@ Require valid-user
 <p>2、使用 mail 命令来查收邮件</p>
 <p>mail -u jake 接收jake 用户的邮件列出邮件列表</p>
 <p>使用编号来显示邮件内容使用 exit 退出</p>
-<p>14.10 配置 Mail 服务的 web 界面</p>
-<p>配置 openwebmail 作为 Mail 服务器的 web 界面</p>
-<p>14.10.1 安装 openwebmail 及其组件openwebmail 及其组件不在系统安装光盘中</p>
+<h2 id="12-10-配置-Mail-服务的-web-界面"><a href="#12-10-配置-Mail-服务的-web-界面" class="headerlink" title="12.10 配置 Mail 服务的 web 界面"></a>12.10 配置 Mail 服务的 web 界面</h2><p>配置 openwebmail 作为 Mail 服务器的 web 界面</p>
+<p>12.10.1 安装 openwebmail 及其组件openwebmail 及其组件不在系统安装光盘中</p>
 <p>rpm -ivh perl-Text-lconv-1.4.2el4.rf.i386.rpm rpm -ivh perl-suidperl-5.8.8-10.i386.rpm</p>
 <p>rpm -ivh openwebmail2.52-1.rpm</p>
-<p>14.10.2 配置 Openwebmail</p>
+<p>12.10.2 配置 Openwebmail</p>
 <p>cd /var/www/cgi-bin/openwebmai/</p>
 <p>1、vi etc/defaults/dbm.conf 将第 30 – 31 行修改为dbm_ext .db</p>
 <p>dbmopen_ext .db dbmopen_haslock yes</p>
@@ -1792,7 +1680,7 @@ Require valid-user
 <p>vi etc/openwebmail.conf 第 62 行</p>
 <p>default_language zh_CN.GB2312 第 85 行</p>
 <p>default_iconset Cool3D.Chinese.Simplified</p>
-<p>14.10.3 配置 apache</p>
+<p>12.10.3 配置 apache</p>
 <p>配置 apache 简化用户登录网址内容vi /etc/httpd/conf/httpd.conf 第 264 行</p>
 <p>ServerName <a target="_blank" rel="noopener" href="http://www.huayu.com/">www.huayu.com</a>：80</p>
 <p>最后添加</p>
@@ -1802,19 +1690,17 @@ Require valid-user
 <p>重新启动服务</p>
 <p>service sendmail restart service httpd restart</p>
 <p>使用 web 界面进行收发邮件测试</p>
-<p>第十五章. FTP 服务器</p>
-<p>15.1 FTP</p>
-<p>15.1.1 FTP 协议</p>
+<h1 id="第十三章-FTP-服务器"><a href="#第十三章-FTP-服务器" class="headerlink" title="第十三章. FTP 服务器"></a>第十三章. FTP 服务器</h1><h2 id="13-1-FTP"><a href="#13-1-FTP" class="headerlink" title="13.1 FTP"></a>13.1 FTP</h2><p>13.1.1 FTP 协议</p>
 <p>FTP（File Transfer Protocol），是文件传输协议的简称。用于 Internet 上的控制文件的双向传输。同时， 它也是一个应用程序（Application）。用户可以通过它把自己的 PC 机与世界各地所有运行 FTP 协议的服 务器相连，访问服务器上的大量程序和信息。</p>
 <p>在 FTP 的使用当中，用户经常遇到两个概念：”下载”（Download）和”上载”（Upload）。”下载”文件就是从远程主机拷贝文件至自己的计算机上；”上载”文件就是将文件从自己的计算机中拷贝至远程主机上。用Internet 语言来说，用户可通过客户机程序向（从）远程主机上载（下载）文件。</p>
 <p>TCP/IP 协议中，FTP 标准命令 TCP 端口号为 21，Port 方式数据端口为 20。FTP 协议的任务是从一台计算机将文件传送到另一台计算机，它与这两台计算机所处的位置、联接的方式、甚至是是否使用相同的操作系统无关。假设两台计算机通过 ftp 协议对话，并且能访问 Internet， 你可以用 ftp 命令来传输文件。每种操作系统使用上有某一些细微差别，但是每种协议基本的命令结构是相同的。</p>
-<p>15.1.2 FTP 协议的传输方式</p>
+<p>13.1.2 FTP 协议的传输方式</p>
 <p>FTP 的传输有两种方式：ASCII 传输模式和二进制数据传输模式。</p>
 <p>\1. ASCII 传输方式：假定用户正在拷贝的文件包含的简单 ASCII 码文本，如果在远程机器上运行的不是 UNIX，当文件传输时 ftp 通常会自动地调整文件的内容以便于把文件解释成另外那台计算机存储文本文件的格式。</p>
 <p>但是常常有这样的情况，用户正在传输的文件包含的不是文本文件，它们可能是程序，数据库，字处理文件或者压缩文件（尽管字处理文件包含的大部分是文本，其中也包含有指示页尺寸，字库等信息的非打印字符）。在拷贝任何非文本文件之前，用 binary 命令告诉 ftp 逐字拷贝，不要对这些文件进行处理， 这也是下面要讲的二进制传输。</p>
 <p>\2. 二进制传输模式：在二进制传输中，保存文件的位序，以便原始和拷贝的是逐位一一对应的。即使目的地机器上包含位序列的文件是没意义的。例如，macintosh 以二进制方式传送可执行文件到 Windows 系统，在对方系统上，此文件不能执行。</p>
 <p>如果你在 ASCII 方式下传输二进制文件，即使不需要也仍会转译。这会使传输稍微变慢 ，也会损坏数据，使文件变得不能用。（在大多数计算机上，ASCII 方式一般假设每一字符的第一有效位无意义，因为ASCII 字符组合不使用它。如果你传输二进制文件，所有的位都是重要的。）如果你知道这两台机器是同样的，则二进制方式对文本文件和数据文件都是有效的。</p>
-<p>15.1.3 Ftp 命令</p>
+<p>13.1.3 Ftp 命令</p>
 <p>1、FTP 服务器的登陆</p>
 <p>匿名用户：FTP 口令：FTP</p>
 <p>用户 ：ANONYMOUS 口令：任何电子邮件2、显示文件信息：DIR/IS</p>
@@ -1824,16 +1710,16 @@ Require valid-user
 <p>6、多文件上传：MPUT</p>
 <p>7、退出：BYE</p>
 <p>8、帮助：HELP</p>
-<p>15.2 linux 下的相关文件和服务1、vsftpd 包的安装</p>
-<p>vsftpd-2.0.5-10.el5.386.rpm 2、vsftpd 服务名称 vsftpd</p>
+<h2 id="13-2-linux-下的相关文件和服务"><a href="#13-2-linux-下的相关文件和服务" class="headerlink" title="13.2 linux 下的相关文件和服务"></a>13.2 linux 下的相关文件和服务</h2><p>1、vsftpd 包的安装</p>
+<p>vsftpd-2.0.5-10.el5.386.rpm </p>
+<p>2、vsftpd 服务名称 vsftpd</p>
 <p>3、相关文件</p>
 <p>/etc/vsftpd/vsftpd.conf vsftpd 的主配置文件</p>
 <p>/etc/vsftpd.user_list 用户登录配置文件</p>
 <p>/etc/vsftpd.ftpusers 该文件中的用户绝对不能登录到主机</p>
 <p>/etc/vsftpd.chroot_list 用户被限制其家目录，不允许向上级目录查看，默认情况下该文件并没有建立</p>
 <p>/var/ftp 匿名 ftp 账户的家目录</p>
-<p>15.3 vsftpd 主配置文件的参数介绍</p>
-<p>/etc/vsftpd/vsftpd.conf 文件的相关参数如下: anonymous_enable=YES 是否允许匿名 ftp,如否则选择 NO local_enable=YES 是否允许本地用户登录local_umask=022 默认的 umask 码</p>
+<h2 id="13-3-vsftpd-主配置文件的参数介绍"><a href="#13-3-vsftpd-主配置文件的参数介绍" class="headerlink" title="13.3 vsftpd 主配置文件的参数介绍"></a>13.3 vsftpd 主配置文件的参数介绍</h2><p>/etc/vsftpd/vsftpd.conf 文件的相关参数如下: anonymous_enable=YES 是否允许匿名 ftp,如否则选择 NO local_enable=YES 是否允许本地用户登录local_umask=022 默认的 umask 码</p>
 <p>anon_upload_enable=YES 是否允许匿名 ftp 用户访问anon_upload_enable=YES 是否允许匿名上传文件anon_mkdir_write_enable=YES 是否允许匿名用户有创建目录的权利</p>
 <p>dirmessage_enable=YES 是否显示目录说明文件,默认是 YES 但需要手工创建.message 文件xferlog_enable=YES 是否记录 ftp 传输过程</p>
 <p>connect_from_port_20=YES 是否确信端口传输来自 20(ftp-data)</p>
@@ -1841,31 +1727,30 @@ Require valid-user
 <p>xferlog_file=/var/log/vsftpd.log ftp 传输日志的路径和名字默认是/var/log/vsftpd.log xferlog_std_format=YES 是否使用标准的 ftp xferlog 模式</p>
 <p>idle_session_timeout=600 设置默认的断开不活跃 session 的时间data_connection_timeout=120 设置数据传输超时时间</p>
 <p>ascii_upload_enable=YES ascii_download_enable=YES 是否使用 ascii 码方式上传和下载文件ftpd_banner=Welcome to chenlf FTP service. 定制欢迎信息</p>
-<p>15.4 配置匿名的 ftp 服务器</p>
-<p>15.4.1 基本的匿名 ftp 服务器启动 vsftpd 服务即可使用</p>
+<h2 id="13-4-配置匿名的-ftp-服务器"><a href="#13-4-配置匿名的-ftp-服务器" class="headerlink" title="13.4 配置匿名的 ftp 服务器"></a>13.4 配置匿名的 ftp 服务器</h2><p>13.4.1 基本的匿名 ftp 服务器启动 vsftpd 服务即可使用</p>
 <p>使用命令行和浏览器进行测试</p>
-<p>15.4.2 配置允许匿名用户上传的 ftp 服务器</p>
+<p>13.4.2 配置允许匿名用户上传的 ftp 服务器</p>
 <p>1、在匿名用户的主目录下，给默认的 pub 目录添加写权限</p>
 <p>2、编辑 ftp 的主配置文件，添加允许上传语句第 27 行和 31 行分别定义允许匿名用户上传文件和上传目录write_enable=YES</p>
 <p>local_umask=022 anon_upload_enable=YES anon_mkdir_write_enable=YES 3、重新启动服务</p>
-<p>15.4.3 配置匿名用户的完全权限</p>
+<p>13.4.3 配置匿名用户的完全权限</p>
 <p>在用户可以上传的基础上，对匿名用户开放所有权限，如续传，删除等，然后重新启动服务即可。anon_world_readable_only=NO</p>
 <p>anon_other_write_enable=YES</p>
-<p>15.4.4 配置基于端口的匿名虚拟 ftp 服务器1、生成虚拟的 ftp 服务器主配置文件</p>
-<p>cp /etc/vsftpd/vsftpd.conf /etc/vsftpd/port.conf 2、编辑虚拟的 ftp 主配置文件/etc/vsftpd/port.conf vi /etc/vsftpd/port.conf</p>
+<p>13.4.4 配置基于端口的匿名虚拟 ftp 服务器</p>
+<p>1、生成虚拟的 ftp 服务器主配置文件</p>
+<p>cp /etc/vsftpd/vsftpd.conf /etc/vsftpd/port.conf</p>
+<p> 2、编辑虚拟的 ftp 主配置文件/etc/vsftpd/port.conf vi /etc/vsftpd/port.conf</p>
 <p>添加虚拟服务器的端口和匿名用户listen_port=2121 ftp_username=ftpguest</p>
 <p>3、创建虚拟 ftp 服务器的匿名用户和登录的主目录useradd -d /var/port ftpguest</p>
 <p>4、重新启动 vsftpd 服务</p>
-<p>15.5 配置本地用户的 ftp 服务器</p>
-<p>需要使用用户和密码来访问的 ftp 服务器</p>
+<h2 id="13-5-配置本地用户的-ftp-服务器"><a href="#13-5-配置本地用户的-ftp-服务器" class="headerlink" title="13.5 配置本地用户的 ftp 服务器"></a>13.5 配置本地用户的 ftp 服务器</h2><p>需要使用用户和密码来访问的 ftp 服务器</p>
 <p>1、编辑主配置文件/etc/vsftpd/vsftpd.conf，第 97 行，锁定所有用户的主目录chroot_local_user=YES</p>
 <p>2、重新启动服务</p>
 <p>对用户限制下载速度 1、编辑主配置文件anon_max_rate=50000</p>
 <p>local_max_rate=200000单位为 byte/s</p>
 <p>2、重新启动服务即可</p>
 <p>\18. Iptables 防火墙</p>
-<p>18.1 防火墙</p>
-<p>1、防火墙的定义</p>
+<h1 id="第十四章防火墙"><a href="#第十四章防火墙" class="headerlink" title="第十四章防火墙"></a>第十四章防火墙</h1><p>1、防火墙的定义</p>
 <p>所谓防火墙指的是一个由软件和硬件设备组合而成、在内部网和外部网之间、专用网与公共网之间的界面上构造的保护屏障.是一种获取安全性方法的形象说法，它是一种计算机硬件和软件的结合，使 Internet 与Intranet 之间建立起一个安全网关（Security Gateway），从而保护内部网免受非法用户的侵入，防火墙主要由服务访问规则、验证工具、包过滤和应用网关 4 个部分组成，</p>
 <p>防火墙就是一个位于计算机和它所连接的网络之间的软件或硬件(其中硬件防火墙用的较少，例如国防部以及大型机房等地才用,因为它价格昂贵)。该计算机流入流出的所有网络通信均要经过此防火墙。 2、防火墙的功能</p>
 <p>防火墙对流经它的网络通信进行扫描，这样能够过滤掉一些攻击，以免其在目标计算机上被执行。防火墙还可以关闭不使用的端口。而且它还能禁止特定端口的流出通信，封锁特洛伊木马。最后，它可以禁止来自特殊站点的访问，从而防止来自不明入侵者的所有通信。</p>
@@ -1884,8 +1769,7 @@ Require valid-user
 <p>2.0 ipfwadm</p>
 <p>2.2 ipchains</p>
 <p>2.4 与 2.6 iptables</p>
-<p>18.2 iptables</p>
-<p>1、iptables 介绍</p>
+<h2 id="14-1-iptables"><a href="#14-1-iptables" class="headerlink" title="14.1 iptables"></a>14.1 iptables</h2><p>1、iptables 介绍</p>
 <p>iptables 是建立在 netfilter 架构基础上的一个包过滤管理工具。</p>
 <p>用户通过 /sbin/iptables 命令来管理 iptables，和 route 命令相同，iptables 命令的效果在重新启动以后就不再有效。</p>
 <p>可以使用 /etc/rc.d/init.d/iptables save 将当前 iptables 规则写到 /etc/sysconfig/iptables 文件中，那么每次开机时/etc/rc.d/init.d/iptables start 命令会使 /etc/sysconfig/iptables 中的规则生效。</p>
@@ -1896,12 +1780,10 @@ Require valid-user
 <p>filter 表:  用于过滤封包Nat 表 : 用于做地址转换</p>
 <p>mangle 表： 允许改变包的内容来进一步矫正包4、链</p>
 <p>INPUT 链： 存在于 filter 表，主要用于处理进入本机的封包OUTPUT 链： 存在于 filter 表,主要用于处理离开本机的封包FORWARD 链: 存在于 fileter 表，主要用于处理穿过本机的封包PREROUTING 链: 存在于 nat 表，主要用于修改目的地址(DNAT) POSTROUTING 链: 存在于 nat 表，主要用于修改来源地址(SNAT)</p>
-<p>18.3 iptebles 文件</p>
-<p>1、防火墙配置保存文件</p>
+<h2 id="14-2-iptebles-文件"><a href="#14-2-iptebles-文件" class="headerlink" title="14.2 iptebles 文件"></a>14.2 iptebles 文件</h2><p>1、防火墙配置保存文件</p>
 <p>/etc/sysconfig/iptables 2、防火墙配置保存命令service iptables save</p>
 <p>3、防火墙的启动/停止/重启service iptables start service iptables stot service iptables restart</p>
-<p>18.4 iptables 的配置</p>
-<p>1、iptables 的标准语法</p>
+<h2 id="14-3-iptables-的配置"><a href="#14-3-iptables-的配置" class="headerlink" title="14.3 iptables 的配置"></a>14.3 iptables 的配置</h2><p>1、iptables 的标准语法</p>
 <p>iptables [-t table] 命令 [chain] [rules] [-j target] table——指定表名</p>
 <p>NAT 和一般的 mangle 用 -t 参数指定要操作哪个表。filter 是默认的表，如果没有 -t 参数，就默认对filter 表操作。</p>
 <p>命令——对链的操作命令chain—— 链 名 rules——规则target——动作如何进行example：</p>
@@ -1954,8 +1836,7 @@ Require valid-user
 <p>在某些选项前加上！来表示非指定值</p>
 <p>example： -s -！200.200.200.1/24 代表除 200.200.200.1 以外的 IP 地址</p>
 <p>-p -！icmp 代表除了 icmp 以外的协议。</p>
-<p>18.5 防火墙配置</p>
-<p>service iptables restart</p>
+<h2 id="14-4-防火墙配置"><a href="#14-4-防火墙配置" class="headerlink" title="14.4 防火墙配置"></a>14.4 防火墙配置</h2><p>service iptables restart</p>
 <p>重新启动 iptables 服务iptables -F</p>
 <p>清除规则</p>
 <p>iptables -P INPUT DROP iptables -P OUTPUT DROP iptables -P FORWARD DROP 改变默认规则策略</p>
@@ -1963,7 +1844,7 @@ Require valid-user
 <p>允许 ssh</p>
 <p>iptables -A INPUT -p udp -s 0/0 –-dport 53 -j ACCEPT iptables -A OUTPUT -p udp -d 0/0 –-sport 53 -j ACCEPT 允许 DNS</p>
 <p>iptables -A INPUT -p tcp -s 0/0 –-dport 80 -j ACCEPT iptables -A INPUT -p tcp -s 0/0 –-dport 443 -j ACCEPT iptables -A OUTPUT -p tcp -d 0/0 –-sport 80 -j ACCEPT iptables -A OUTPUT -p tcp -d 0/0 –-sport 443 -j ACCEPT 允许 www 服务</p>
-<p>18.6 NAT 表配置1、NAT 的定义</p>
+<h2 id="14-5-NAT-表配置"><a href="#14-5-NAT-表配置" class="headerlink" title="14.5 NAT 表配置"></a>14.5 NAT 表配置</h2><p>1、NAT 的定义</p>
 <p>NAT 英文全称是 Network Address Translation，称是网络地址转换，它是一个 IETF 标准，允许一个机构以一个地址出现在 Internet 上。NAT 将每个局域网节点的地址转换成一个 IP 地址，反之亦然。它也可以应用到防火墙技术里，把个别 IP 地址隐藏起来不被外界发现，使外界无法直接访问内部网络设备，同时， 它还帮助网络可以超越地址的限制，合理地安排网络中的公有 Internet 地址和私有 IP 地址的使用。</p>
 <p>2、NAT 的类型</p>
 <p>静态NAT(Static NAT)</p>
@@ -2061,7 +1942,7 @@ Require valid-user
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2022年8月17日</div>
+          <div>2022年8月18日</div>
         </div>
       
       <div class="license-meta-item">
