@@ -1,0 +1,831 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/wallhaven-8old52_300x300.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="冬至">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Windows10 Penetration Suite Toolkit within Kali Linux2022.05.26 补充内容 12345678910111213141516171819202122231. 全新制作全套虚拟机镜像，包含：   Windows 7 x64   Windows 8 x64   Windows 10 x64   Windows Server 2008 x64">
+<meta property="og:type" content="article">
+<meta property="og:title" content="系统镜像工具">
+<meta property="og:url" content="http://47.108.137.21/2022/08/18/%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F%E5%B7%A5%E5%85%B7/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="Windows10 Penetration Suite Toolkit within Kali Linux2022.05.26 补充内容 12345678910111213141516171819202122231. 全新制作全套虚拟机镜像，包含：   Windows 7 x64   Windows 8 x64   Windows 10 x64   Windows Server 2008 x64">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://47.108.137.21/img/wallhaven-572k81.png">
+<meta property="article:published_time" content="2022-08-18T12:58:25.000Z">
+<meta property="article:modified_time" content="2022-08-18T14:14:47.691Z">
+<meta property="article:author" content="冬至">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="系统">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://47.108.137.21/img/wallhaven-572k81.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>系统镜像工具 - Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/fluid-extention.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"47.108.137.21","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"9kGDSQDkxkE3TSzEqNu8npXL-gzGzoHsz","app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 80vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>wxxhyx&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+    <div id="tp-weather-widget"></div>
+  <script>
+    (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+    window.SeniverseWeatherWidget('show', {
+      flavor: "slim",
+      location: "WM7C46MEE1DC",
+      geolocation: true,
+      language: "zh-Hans",
+      unit: "c",
+      theme: "auto",
+      token: "fdd1eeb8-dde9-49cb-ac34-62b6301b1b9f",
+      hover: "enabled",
+      container: "tp-weather-widget"
+    })
+  </script>
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/wallhaven-572k81.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="系统镜像工具"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        冬至
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-08-18 20:58" pubdate>
+          2022年8月18日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          11k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          89 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">系统镜像工具</h1>
+            
+              <p class="note note-primary">
+                
+                  
+                    本文最后更新于：3 分钟前
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Windows10-Penetration-Suite-Toolkit-within-Kali-Linux"><a href="#Windows10-Penetration-Suite-Toolkit-within-Kali-Linux" class="headerlink" title="Windows10 Penetration Suite Toolkit within Kali Linux"></a>Windows10 Penetration Suite Toolkit within Kali Linux</h1><p><strong><code>2022.05.26 补充内容</code></strong></p>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs tap">1. 全新制作全套虚拟机镜像，包含：<br><br>   Windows<span class="hljs-number"> 7 </span>x64<br>   Windows<span class="hljs-number"> 8 </span>x64<br>   Windows<span class="hljs-number"> 10 </span>x64<br>   Windows Server<span class="hljs-number"> 2008 </span>x64<br>   Windows Server<span class="hljs-number"> 2012 </span>x64<br>   Windows Server<span class="hljs-number"> 2016 </span>x64<br>   Windows Server<span class="hljs-number"> 2019 </span>x64<br>   Ubuntu<span class="hljs-number"> 20 </span>x64<br>   <br>   所有虚拟机镜像均安装：<br>   VMTools<br>   7z<br>   Microsoft Visual C++ 2008-2022 运行库<br>   密钥或激活工具激活<br>   <br>   可供测试软件，环境搭建等用途。<br>   虚拟机账号密码已备注在VMware描述栏处，请注意查看。<br>   <br>   下载链接：<br>   链接：https://pan.xunlei.com/s/VN2xlbB9pxTo0bWdgdg5vXUtA1<br>   提取码：fvp3<br></code></pre></td></tr></table></figure>
+<p><strong><code>2022.04.09 补充说明</code></strong></p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs 1c"><span class="hljs-number">1</span>. 火绒可能会拦截对外攻击行为，在测试<span class="hljs-built_in">exp</span>的时候如果失败可以查看火绒日志看是否被拦截。<br>   感谢“看那蔚蓝色的星球”反馈。<br></code></pre></td></tr></table></figure>
+<p><strong><code>2022.04.05 更新说明</code></strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">1.</span> 本集成环境是根据本人渗透工作和学习中的侧重点进行制作，不可能做到满足所有人的需求。<br><span class="hljs-bullet">2.</span> 发布以来已历经3次更新，借鉴参考了很多朋友的有益意见及建议，在此表示感谢！<br><span class="hljs-bullet">3.</span> 如果您有好的意见或者建议，请联系邮箱burpsuite@qq.com。<br><br>遵循精益求精、尽善尽美的原则：<br><br><span class="hljs-bullet">-</span> 1. 去除了部分长期未更新及效果不好的工具；<br><span class="hljs-bullet">-</span> 2. 补充了部分之前未收纳的工具；<br><span class="hljs-bullet">-</span> 3. 目录尽可能做到简洁分类，重建开始菜单及快捷启动索引；<br><span class="hljs-bullet">-</span> 4. 升级部分软件为最新版；<br><span class="hljs-bullet">-</span> 5. 升级系统补丁截止至2022.04.03；<br><span class="hljs-bullet">-</span> 6. 优化系统，清理无用垃圾文件。<br></code></pre></td></tr></table></figure>
+<h2 id="系统简介"><a href="#系统简介" class="headerlink" title="系统简介"></a><strong><code>系统简介</code></strong></h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> 基于Win10 Workstation 21H2 x64 MSDN原版镜像制作；<br><span class="hljs-bullet">-</span> 完整安装WSL Kali Linux 2022.1，并配置图形化模式；<br><span class="hljs-bullet">-</span> 精简系统自带软件，美化字体及部分图标，适度优化；<br><span class="hljs-bullet">-</span> 镜像容量74.5G，使用单磁盘文件存储，提升性能；<br><span class="hljs-bullet">-</span> 建议运行环境：<br><span class="hljs-bullet">  *</span> vmware：16.0<br><span class="hljs-bullet">  *</span> 运行内存：8G<br><span class="hljs-bullet">  *</span> 固态硬盘：100G<br></code></pre></td></tr></table></figure>
+<p><strong><code>制作声明：</code></strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">1.</span> 所有的安装类软件均下载自软件对应的官方网站；<br><span class="hljs-bullet">2.</span> 所有的绿色类软件均下载自果核剥壳。（https://www.ghxi.com/）；<br><span class="hljs-bullet">3.</span> 所有的脚本类工具均下载自github。<br><span class="hljs-bullet">4.</span> 部分授权类工具（破解版）及优秀的渗透工具来自微信公众号分享；<br><br><span class="hljs-bullet">   *</span> 排名不分先后，同时也推荐大家关注，一起变得更强。<br>   <br>   雾晓安全、果核剥壳、归零安全、潇湘信安、学蚁致用、谢公子学安全、利刃藏锋、棉花糖网络安全圈、HACK技术沉淀营、无尾熊安全、T00ls、<br>   渗透攻击红队、洛米唯熊、雷石安全实验室、酒仙桥六号部队、InBug实验室、鸿鹄实验室、黑白之道、HACK之道、GobySec、Gcow安全团队、<br>   Gamma实验室、CobaltStrike实战、冰河技术、网络安全与黑客技术、QZ的安全悟道、菜鸟学信安、乌雲安全、白帽子飙车路、信安之路、chaosec、<br>   鸟哥谈安全、安全小飞侠、moonsec、系统安全运维、天驿安全、零组攻防实验室、lemonsec、橘猫学安全、Hacking黑白红、渗透xiao白帽、<br>   渗透安全团队、白帽子社区、HACK学习呀、猪猪谈安全、开普勒安全团队、吾爱破解论坛、WhITECat安全团队、寻云安全团队、Khan安全攻防实验室、<br>   Bypass、天億网络安全、关注安全技术、玄魂工作室、边界骇客、零度安全攻防实验室、WgpSec狼组安全团队、黑白天实验室、靶机狂魔、渗透云笔记、<br>   TeamsSix、hijackY、TimeLine Sec、重生信息安全、GobySec、Gcow安全团队、冰蚕实验室。<br> <br><span class="hljs-bullet">5.</span> 本项目制作的初衷是帮助渗透新手快速搭建工作环境，工欲善其事，必先利其器；<br><span class="hljs-bullet">6.</span> 本项目由于后期调试原因可能会遗留部分本人的信息，请直接忽视；<br><span class="hljs-bullet">7.</span> 本项目坚决不接受也从未曾接受任何形式的赞助；<br><span class="hljs-bullet">8.</span> 如果您有好的意见或者建议，请联系邮箱burpsuite@qq.com。<br></code></pre></td></tr></table></figure>
+<p><strong><code>免责声明：</code></strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">1.</span> 本镜像仅面向合法授权的企业安全建设行为，如您需要测试本镜像的可用性，请自行搭建靶机环境；<br><span class="hljs-bullet">2.</span> 在使用本镜像进行检测时，您应确保该行为符合当地的法律法规，并且已经取得了足够的授权；<br><span class="hljs-bullet">3.</span> 如您在使用本镜像的过程中存在任何非法行为，您需自行承担相应后果，作者将不承担任何法律及连带责任。<br></code></pre></td></tr></table></figure>
+<h1 id="软件及工具介绍："><a href="#软件及工具介绍：" class="headerlink" title="软件及工具介绍："></a><code>软件及工具介绍：</code></h1><h2 id="1-系统环境类："><a href="#1-系统环境类：" class="headerlink" title="1. 系统环境类："></a><strong><code>1. 系统环境类：</code></strong></h2><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-bullet">- </span>Directx<br><span class="hljs-bullet">- </span>Net Framework 3.5<br><span class="hljs-bullet">- </span>Net Framework 4.72<br><span class="hljs-bullet">- </span>Visual basic virtual machine<br><span class="hljs-bullet">- </span>Microsoft C runtime library<br><span class="hljs-bullet">- </span>Microsoft visual C++ 2005-2022<br><span class="hljs-bullet">- </span>集成常用字库<br></code></pre></td></tr></table></figure>
+<h2 id="2-WindowsApp类："><a href="#2-WindowsApp类：" class="headerlink" title="2. WindowsApp类："></a><strong><code>2. WindowsApp类：</code></strong></h2><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-bullet">- </span>WSL kali linux<br><span class="hljs-bullet">- </span>Windows Terminal（已替换默认cmd）<br></code></pre></td></tr></table></figure>
+<h2 id="3-其他工具类-（C-Softwares）："><a href="#3-其他工具类-（C-Softwares）：" class="headerlink" title="3. 其他工具类 （C:\Softwares）："></a><strong><code>3. 其他工具类 （C:\Softwares）：</code></strong></h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> aact: 激活工具（一键激活windows &amp; office）<br><span class="hljs-bullet">-</span> bandicam: 视频录制工具（注册版）<br><span class="hljs-bullet">-</span> bandizip: 压缩工具<br><span class="hljs-bullet">-</span> chrome: 99.0 绿色修改版<br><span class="hljs-bullet">  *</span> 主要集成插件:<br><span class="hljs-bullet">    -</span> adblock: 广告拦截工具<br><span class="hljs-bullet">    -</span> adobe acrobat：pdf工具<br><span class="hljs-bullet">    -</span> charset：修改网页编码工具<br><span class="hljs-bullet">    -</span> chrome 清理大师: chrome清理工具<br><span class="hljs-bullet">    -</span> editthiscookie: cookie编辑工具<br><span class="hljs-bullet">    -</span> fofa pro view：fofa工具<br><span class="hljs-bullet">    -</span> funnel search：google搜索工具<br><span class="hljs-bullet">    -</span> hackbar：hackbar<br><span class="hljs-bullet">    -</span> infinity：标签页工具<br><span class="hljs-bullet">    -</span> ip address and domain inf: ip&amp;domain探测工具<br><span class="hljs-bullet">    -</span> ip whois: whois 探测工具<br><span class="hljs-bullet">    -</span> neater bookmarks: 书签管理工具<br><span class="hljs-bullet">    -</span> octotree: github资源树查看工具<br><span class="hljs-bullet">    -</span> onetab：标签管理工具<br><span class="hljs-bullet">    -</span> postwoman：接口调试工具<br><span class="hljs-bullet">    -</span> proxy switchyomega：代理切换工具<br><span class="hljs-bullet">    -</span> seoquake：网页统计工具<br><span class="hljs-bullet">    -</span> supercopy：超级复制<br><span class="hljs-bullet">    -</span> toolbox 常用工具: 集成常用小工具<br><span class="hljs-bullet">    -</span> wappalyzer：网页技术分析工具<br><span class="hljs-bullet">    -</span> whatruns：网页技术分析工具<br><span class="hljs-bullet">    -</span> yet another drag and go: 超链接拖拽新窗口打开<br><span class="hljs-bullet">-</span> contextmenumanager：右键菜单管理工具<br><span class="hljs-bullet">-</span> dism++: 系统调节工具<br><span class="hljs-bullet">-</span> everything: 搜索工具（已禁用windows自带搜索）<br><span class="hljs-bullet">-</span> fdm：下载工具<br><span class="hljs-bullet">-</span> google earth：谷歌地球<br><span class="hljs-bullet">-</span> hackbgrt：修改windows启动icon<br><span class="hljs-bullet">-</span> honeyview: 看图工具<br><span class="hljs-bullet">-</span> huorong: 杀毒工具（c:\penetration 为白名单）<br><span class="hljs-bullet">-</span> icon：第三方图标包<br><span class="hljs-bullet">-</span> iobit:<br><span class="hljs-bullet">  *</span> uninstaller: 卸载工具（注册版）<br><span class="hljs-bullet">  *</span> advanced systemcare: 优化清理工具（注册版）<br><span class="hljs-bullet">  *</span> smart defrag: 磁盘碎片整理工具（注册版）<br><span class="hljs-bullet">-</span> mactype：字体管理工具（已修改系统默认字体为Mac苹方体）<br><span class="hljs-bullet">-</span> maye: 快捷启动工具<br><span class="hljs-bullet">-</span> meitu：美图秀秀<br><span class="hljs-bullet">-</span> oldnewexplorer: 资源管理器调节工具<br><span class="hljs-bullet">-</span> pcmaster: 系统调整工具<br><span class="hljs-bullet">  *</span> 已创建右键快捷菜单：<br><span class="hljs-bullet">    -</span> 在此处打开terminal终端<br><span class="hljs-bullet">    -</span> 在此处打开kali linux终端<br><span class="hljs-bullet">    -</span> 在此处打开notepad<br><span class="hljs-bullet">    -</span> 控制面板<br><span class="hljs-bullet">    -</span> 计算器<br><span class="hljs-bullet">    -</span> 注册表<br><span class="hljs-bullet">-</span> pdf：极速pdf<br><span class="hljs-bullet">-</span> potplayer: 视频播放工具<br><span class="hljs-bullet">-</span> refresh：刷新图标缓存<br><span class="hljs-bullet">-</span> snipaste: 截图工具<br><span class="hljs-bullet">-</span> telegram：电报客户端<br><span class="hljs-bullet">-</span> wps：wps去广告版<br><span class="hljs-bullet">-</span> youdaodict：有道词典（注册版）（已集成离线翻译库）<br></code></pre></td></tr></table></figure>
+<h2 id="4-渗透测试类（C-Penetration）："><a href="#4-渗透测试类（C-Penetration）：" class="headerlink" title="4. 渗透测试类（C:\Penetration）："></a><strong><code>4. 渗透测试类（C:\Penetration）：</code></strong></h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> 常用的python及csharp脚本类工具均配有start.bat。<br><span class="hljs-bullet">  *</span> 注明工具版本及更新时间<br><span class="hljs-bullet">  *</span> 注明依赖环境<br><span class="hljs-bullet">  *</span> 注明主要参数<br><span class="hljs-bullet">  *</span> 注明简要用法（给工具不给用法的都是耍流氓）<br></code></pre></td></tr></table></figure>
+<h3 id="AndroidTools-安卓工具"><a href="#AndroidTools-安卓工具" class="headerlink" title="[+] AndroidTools 安卓工具:"></a><strong><code>[+] AndroidTools 安卓工具:</code></strong></h3><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-bullet">- </span>apktool：apk反编译工具<br><span class="hljs-bullet">- </span>dex2jar：dex打包工具<br><span class="hljs-bullet">- </span>ldplayer：雷电安卓模拟器<br></code></pre></td></tr></table></figure>
+<h3 id="AntivirusTools-免杀工具："><a href="#AntivirusTools-免杀工具：" class="headerlink" title="[+] AntivirusTools 免杀工具："></a><strong><code>[+] AntivirusTools 免杀工具：</code></strong></h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs awk">- avevasion：https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/1y0n/</span>av_evasion_tool<br>- bypass-antivirus：免杀教程<br>- charlotte：https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/9emin1/</span>charlotte<br>- cool：https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/ed1s0nz/</span>cool<br>- crossnet：https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/dr0op/</span>crossnet-beta<br>- darkarmour：https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/bats3c/</span>darkarmour<br>- shellcodeloader：https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/knownsec/</span>shellcodeloader<br>- vmprotect: 加壳工具（商业加壳，生成exe体积大）<br>- vprotect: 加壳工具（商业加壳，生成exe体积较大）<br>- zhetian：遮天shellcode加载工具（https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/yqcs/</span>ZheTian）<br></code></pre></td></tr></table></figure>
+<h3 id="ConnectTools-连接工具"><a href="#ConnectTools-连接工具" class="headerlink" title="[+] ConnectTools 连接工具:"></a><strong><code>[+] ConnectTools 连接工具:</code></strong></h3><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-bullet">- </span>anydesk<br><span class="hljs-bullet">- </span>filezilla<br><span class="hljs-bullet">- </span>finalshell<br><span class="hljs-bullet">- </span>teamviewer<br><span class="hljs-bullet">- </span>xmanager<br></code></pre></td></tr></table></figure>
+<h3 id="CrackTools-破解工具"><a href="#CrackTools-破解工具" class="headerlink" title="[+] CrackTools 破解工具:"></a><strong><code>[+] CrackTools 破解工具:</code></strong></h3><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">- <span class="hljs-keyword">access</span> <span class="hljs-keyword">password</span> recovery: <span class="hljs-keyword">access</span> 密码破解工具<br>- archive <span class="hljs-keyword">password</span> recovery: zip &amp; rar 密码破解工具<br>- office <span class="hljs-keyword">password</span> recovery: office 密码破解工具<br>- pdf <span class="hljs-keyword">password</span> recovery: pdf 密码破解工具<br></code></pre></td></tr></table></figure>
+<h3 id="DatabaseTools-数据库工具"><a href="#DatabaseTools-数据库工具" class="headerlink" title="[+] DatabaseTools 数据库工具:"></a><strong><code>[+] DatabaseTools 数据库工具:</code></strong></h3><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-bullet">- </span>navicat premium: 数据库连接管理工具<br><span class="hljs-bullet">- </span>neo4j：neo4j数据库管理工具<br><span class="hljs-bullet">- </span>sharp sql tools：mssql数据库利用工具<br><span class="hljs-bullet">- </span>sqlite：sqlite数据库管理工具<br><span class="hljs-bullet">- </span>sqlknife：mssql数据库利用工具<br><span class="hljs-bullet">- </span>sqlmap: 注入工具<br><span class="hljs-bullet">- </span>sylas：mssql &amp; orcle &amp; postgresql数据库利用工具<br><span class="hljs-bullet">- </span>toad：oracle数据库管理工具<br></code></pre></td></tr></table></figure>
+<h3 id="DictionaryTools-字典工具"><a href="#DictionaryTools-字典工具" class="headerlink" title="[+] DictionaryTools 字典工具:"></a><strong><code>[+] DictionaryTools 字典工具:</code></strong></h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk">- mutoudic：木头字典生成工具（注册版）<br>- pentestdicts：https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/ppbibo/</span>pentesterspecialdict<br>- pwdbud：字典生成工具（https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/ort4u/</span>PwdBUD）<br></code></pre></td></tr></table></figure>
+<h3 id="DiskTools-磁盘工具"><a href="#DiskTools-磁盘工具" class="headerlink" title="[+] DiskTools 磁盘工具:"></a><strong><code>[+] DiskTools 磁盘工具:</code></strong></h3><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-bullet">- </span>diskgenius: 专业版（可恢复硬盘数据）<br><span class="hljs-bullet">- </span>ssdfresh：ssd优化工具<br></code></pre></td></tr></table></figure>
+<h3 id="EditTools-编辑工具"><a href="#EditTools-编辑工具" class="headerlink" title="[+] EditTools 编辑工具:"></a><strong><code>[+] EditTools 编辑工具:</code></strong></h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> 010editor: 十六进制编辑工具（注册版）<br><span class="hljs-bullet">-</span> alldup：重复文件搜索工具<br><span class="hljs-bullet">-</span> batchren: 批量重命名工具<br><span class="hljs-bullet">-</span> beyond compare：文件对比工具<br><span class="hljs-bullet">-</span> ctfcrack: 米斯特安全团队工具<br><span class="hljs-bullet">-</span> findstr: 文本检索工具<br><span class="hljs-bullet">-</span> jd-gui: java查看编辑工具<br><span class="hljs-bullet">-</span> jsonview: json查看编辑工具<br><span class="hljs-bullet">-</span> log parse：windows日志分析工具<br><span class="hljs-bullet">-</span> log parse lizard：windows日志分析工具（图形化）<br><span class="hljs-bullet">-</span> notepad++: 编辑工具<br><span class="hljs-bullet">  *</span> 添加右键菜单：使用Notepad编辑<br><span class="hljs-bullet">-</span> pst converter：pst邮件转换工具<br><span class="hljs-bullet">-</span> rapid environment: 环境变量编辑工具<br><span class="hljs-bullet">-</span> sharp sword：csharp版本word查看工具<br><span class="hljs-bullet">-</span> sublime: 编辑工具（注册版）<br><span class="hljs-bullet">  *</span> 添加右键菜单：使用Sublime编辑<br><span class="hljs-bullet">-</span> xmind：思维导图工具<br></code></pre></td></tr></table></figure>
+<h3 id="ExpolitTools-漏洞工具"><a href="#ExpolitTools-漏洞工具" class="headerlink" title="[+] ExpolitTools 漏洞工具:"></a><strong><code>[+] ExpolitTools 漏洞工具:</code></strong></h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs awk">- cms hunter:https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/SecWiki/</span>CMS-Hunter<br>- exphub：https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/zhzyker/</span>exphub<br>- middleware-vulnerability-detection：https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/mai-lang-chai/mi</span>ddleware-vulnerability-detection<br>- system-vulnerability：https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/mai-lang-chai/</span>system-vulnerability<br>- vulmap：web漏扫验证工具（https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/zhzyker/</span>vulmap）<br>- vulnerability：https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/edgesecurityteam/</span>vulnerability<br>- 更多漏洞exp见 c:\Penetration\ExpolitTools（漏洞exp较多，请善用everything搜索）<br></code></pre></td></tr></table></figure>
+<h3 id="IntranetTools-内网工具"><a href="#IntranetTools-内网工具" class="headerlink" title="[+] IntranetTools 内网工具:"></a><strong><code>[+] IntranetTools 内网工具:</code></strong></h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> abptts：内网穿透工具<br><span class="hljs-bullet">-</span> add user: 添加用户工具<br><span class="hljs-bullet">-</span> ad explore：ldap工具<br><span class="hljs-bullet">-</span> blood hound：域渗透分析工具<br><span class="hljs-bullet">-</span> defeat defender：关闭defender工具<br><span class="hljs-bullet">-</span> dismap：内网漏洞扫描工具<br><span class="hljs-bullet">-</span> domain tools：域渗透工具<br><span class="hljs-bullet">-</span> earth worm: 内网穿透工具<br><span class="hljs-bullet">-</span> frp: 内网穿透工具（https://github.com/fatedier/frp）<br><span class="hljs-bullet">-</span> fscan：内网扫描工具（https://github.com/shadow1ng/fscan）<br><span class="hljs-bullet">-</span> homework of powershell：3gstudent powershell工具<br><span class="hljs-bullet">-</span> hydra: 口令爆破工具<br><span class="hljs-bullet">-</span> impacket：内网协议工具（https://github.com/SecureAuthCorp/impacket）<br><span class="hljs-bullet">-</span> invoke-obfuscation：powershell工具（https://github.com/danielbohannon/Invoke-Obfuscation）<br><span class="hljs-bullet">-</span> kscan：内网扫描工具（https://github.com/lcvvvv/kscan）<br><span class="hljs-bullet">-</span> ladon：内网扫描工具（小密圈9.1.4版本）<br><span class="hljs-bullet">-</span> lcx：端口转发工具<br><span class="hljs-bullet">-</span> ldap admin：ldap工具<br><span class="hljs-bullet">-</span> mimikatz：密码抓取工具（文件夹下集成下列密码抓取工具）<br><span class="hljs-bullet">  *</span> gosecretsdump<br><span class="hljs-bullet">  *</span> hklm<br><span class="hljs-bullet">  *</span> kekeo<br><span class="hljs-bullet">  *</span> lazagne<br><span class="hljs-bullet">  *</span> mimipenguin<br><span class="hljs-bullet">  *</span> ntdsdumpex<br><span class="hljs-bullet">  *</span> procdump<br><span class="hljs-bullet">  *</span> pwdump<br><span class="hljs-bullet">  *</span> quarkspw dump<br><span class="hljs-bullet">-</span> nc: 监听工具<br><span class="hljs-bullet">-</span> neo-regeorg：regeorg改良版（https://github.com/L-codes/Neo-reGeorg）<br><span class="hljs-bullet">-</span> openrdp：开启远程桌面工具<br><span class="hljs-bullet">-</span> pe：冰封pe iso镜像<br><span class="hljs-bullet">-</span> powershdll：powershell工具<br><span class="hljs-bullet">-</span> ps2exe：powershell转exe工具<br><span class="hljs-bullet">-</span> pstools：微软官方psexec工具<br><span class="hljs-bullet">-</span> reverseshell：反弹shell工具<br><span class="hljs-bullet">-</span> revsh：内网穿透工具（https://github.com/emptymonkey/revsh）<br><span class="hljs-bullet">-</span> scrun：k8 shellcode加载工具<br><span class="hljs-bullet">-</span> sharp tools：<br><span class="hljs-bullet">  *</span> sharp adi dnsdump：域dns枚举工具<br><span class="hljs-bullet">  *</span> sharp decrypt pwd：浏览器密码解密工具<br><span class="hljs-bullet">  *</span> sharp event log：日志分析工具<br><span class="hljs-bullet">  *</span> sharp hound：域渗透分析工具<br><span class="hljs-bullet">  *</span> sharp net check：出网探测工具<br><span class="hljs-bullet">-</span> socks over rdp：rdp协议内网穿透工具<br><span class="hljs-bullet">-</span> spp：内网穿透工具（https://github.com/esrrhs/spp）<br><span class="hljs-bullet">-</span> stowaway：内网穿透工具（https://github.com/ph4ntonn/Stowaway）<br><span class="hljs-bullet">-</span> wce：windows凭证编辑工具<br><span class="hljs-bullet">-</span> wget：下载工具<br><span class="hljs-bullet">-</span> wmihacker：wmi渗透工具<br><span class="hljs-bullet">-</span> xray：扫描工具（https://github.com/chaitin/xray）<br><span class="hljs-bullet">-</span> 更多内网工具见 C:\Penetration\IntranetTools<br></code></pre></td></tr></table></figure>
+<h3 id="OfficeTools-办公工具："><a href="#OfficeTools-办公工具：" class="headerlink" title="[+] OfficeTools 办公工具："></a><strong><code>[+] OfficeTools 办公工具：</code></strong></h3><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-bullet">- </span>adobe acrobat dc 2020：PDF编辑工具<br><span class="hljs-bullet">- </span>adobe audition 2020：音频编辑工具<br><span class="hljs-bullet">- </span>adobe photoshop 2020：图片编辑工具<br><span class="hljs-bullet">- </span>office: word <span class="hljs-code">+ excel +</span> powerpoint <span class="hljs-code">+ access +</span> onenote + outlook<br><span class="hljs-bullet">- </span>wps：word <span class="hljs-code">+ excel +</span> powerpoint<br></code></pre></td></tr></table></figure>
+<h3 id="ProgramTools-编程工具："><a href="#ProgramTools-编程工具：" class="headerlink" title="[+] ProgramTools 编程工具："></a><strong><code>[+] ProgramTools 编程工具：</code></strong></h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> golang<br><span class="hljs-bullet">-</span> java：<br><span class="hljs-bullet">  *</span> jre1.8.0：已配置环境变量，系统默认调用java8<br><span class="hljs-bullet">  *</span> openjdk15.0.2：绿色版，如有特殊软件需要java15环境运行可直接调用/bin/java.exe即可<br><span class="hljs-bullet">-</span> python：<br><span class="hljs-bullet">  *</span> python2：python2命令启动（python2 test.py）<br><span class="hljs-bullet">  *</span> python3：python3命令启动（python3 test.py）<br><span class="hljs-bullet">  *</span> 已集成本镜像所有python3工具的pip依赖库<br><span class="hljs-bullet">  *</span> 使用pip命令调用python3 pip<br><span class="hljs-bullet">-</span> tdm gcc<br><span class="hljs-bullet">-</span> visual studio 2015<br></code></pre></td></tr></table></figure>
+<h3 id="ReverseTools-逆向工具："><a href="#ReverseTools-逆向工具：" class="headerlink" title="[+] ReverseTools 逆向工具："></a><strong><code>[+] ReverseTools 逆向工具：</code></strong></h3><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-bullet">- </span>dnspy：csharp逆向工具<br><span class="hljs-bullet">- </span>exescope：exe编辑工具<br><span class="hljs-bullet">- </span>green helper：exe绿化工具<br><span class="hljs-bullet">- </span>olly debug：exe调试工具<br><span class="hljs-bullet">- </span>peidtool：查壳工具<br><span class="hljs-bullet">- </span>signtool：签名伪造工具<br><span class="hljs-bullet">- </span>upxshell：upx加壳工具<br><span class="hljs-bullet">- </span>x64dbg：exe调试工具<br></code></pre></td></tr></table></figure>
+<h3 id="ScanTools-扫描工具"><a href="#ScanTools-扫描工具" class="headerlink" title="[+] ScanTools 扫描工具:"></a><strong><code>[+] ScanTools 扫描工具:</code></strong></h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs awk">- acunetix: web vulnerability scanner <span class="hljs-number">14.7</span>.<span class="hljs-number">220401065</span>（注册版）（可扫描Log4j &amp; spring core rce）<br>  * user: admin@awvs.com<br>  * pass: Admin@awvs.com<br>- appscan：app scan <span class="hljs-number">10.0</span>.<span class="hljs-number">7</span>（注册版）<br>- nmap：端口扫描工具<br>- router scan: C段扫描工具<br>- snet cracker: 弱口令扫描工具<br>- scan box:<br>  * avscan 杀毒软件检测工具：<br>    - checkav<br>  * leakscan 敏感文件扫描工具：	<br>    - dirmap：https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/H4ckForJob/</span>dirmap<br>    - dirsearch：https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/maurosoria/</span>dirsearch<br>    - packerfuzzer：https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/rtcatc/</span>Packer-Fuzzer<br>    - scantools：https:<span class="hljs-regexp">//gi</span>tee.com<span class="hljs-regexp">/windyjxx/</span>ScanTools<br>    - yujian<br>    - githack<br>    - ...<br>  * subdomain 子域名探测工具：<br>    - fofa view：fofa查询工具<br>    - oneforall：https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/shmilylty/</span>OneForAll<br>    - securitytrails<br>    - sublist3r：https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/aboul3la/</span>Sublist3r<br>    - subfinder：https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/projectdiscovery/</span>subfinder<br>    - webtitle<br>    - domaininfo<br>    - webbatchrequest<br>    - ...<br>- 更多扫描工具见 C:\Penetration\ScanTools\ScanBox（其中scanbox项目 https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/we5ter/</span>scanners-box）<br></code></pre></td></tr></table></figure>
+<h3 id="ShellTools-权限工具"><a href="#ShellTools-权限工具" class="headerlink" title="[+] ShellTools 权限工具:"></a><strong><code>[+] ShellTools 权限工具:</code></strong></h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs awk">- antsword: 蚁剑（已集成插件）（https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/AntSwordProject/</span>AntSword-Loader）<br>- behinder: 冰蝎（shell密码统一为cmd）（https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/rebeyond/</span>Behinder）<br>  * behinder <span class="hljs-number">2.0</span>.<span class="hljs-number">1</span><br>  * behinder <span class="hljs-number">3.0</span> beta11<br>  * behinder <span class="hljs-number">3.3</span>.<span class="hljs-number">2</span>修改版（https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/angels520/</span>rebeyond-Mode）<br>- cobaltstrike: <span class="hljs-number">4.4</span>汉化版<br>  * 使用csagent汉化（https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/Twi1ight/</span>CSAgent）<br>  * 去除cobaltstrike特征（修改端口 + 重签证书 + random.profile）<br>  * vps启动teamserver：./teamserver ip password random.profile<br>  * 集成插件：（C:\Penetration\ShellTools\CobaltStrike\scripts）<br>    - adcollection<br>    - bypassav<br>    - erebus<br>    - eval<br>    - eventlogmaster<br>    - ladon<br>    - mikasa<br>    - taowu<br>- gbbypass：jsp免杀工具（https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/czz1233/</span>GBByPass）<br>- godzilla：哥斯拉（密码为默认pass + key）（https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/BeichenDream/</span>Godzilla）<br>- kali：wsl kali linux <span class="hljs-number">2022.1</span><br>  * 用户：<br>    - user：kali pass：kali<br>    - user：root pass：root<br>  * 修改软件源为阿里云 + 清华大学<br>  * 完整安装kali linux所有软件包<br>  * 安装xrdp服务，可用rdp客户端打开kali linux图形化模式<br>    - kali命令行模式下运行<span class="hljs-regexp">/home/</span>kali/xrdp-restart.sh打开xrdp服务，即可使用rdp登录kali<br>    - rdp配置：<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">3390</span><br>    - kali命令行模式下运行<span class="hljs-regexp">/home/</span>kali/xrdp-stop.sh关闭xrdp服务<br>    - 如果不需要使用图形化模式，建议关闭xrdp服务（非常占用资源）<br>- pyshell：python版shell管理工具（https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/JoelGMSec/</span>PyShell）<br>- skyscorpion：天蝎（shell密码统一为cmd）（https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/shack2/</span>skyscorpion）<br>- shell:免杀一句话木马（密码统一为cmd）<br>- webshell: webshell收集项目（https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/tennc/</span>webshell）<br></code></pre></td></tr></table></figure>
+<h3 id="StegaTools-隐写工具："><a href="#StegaTools-隐写工具：" class="headerlink" title="[+] StegaTools 隐写工具："></a><strong><code>[+] StegaTools 隐写工具：</code></strong></h3><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-bullet">- </span>beyond compare：对比工具<br><span class="hljs-bullet">- </span>binwalk：分解工具<br><span class="hljs-bullet">- </span>blind-watermark：盲水印工具<br><span class="hljs-bullet">- </span>crc calculator：校验工具<br><span class="hljs-bullet">- </span>f5：f5隐写工具<br><span class="hljs-code">  * f5-steganography</span><br><span class="hljs-code">  * lsb-steganography</span><br><span class="hljs-code">  * steganography</span><br><span class="hljs-bullet">- </span>foremost：分离工具<br><span class="hljs-bullet">- </span>giftools：gif工具<br><span class="hljs-bullet">- </span>gnuplot：<br><span class="hljs-bullet">- </span>jphs：jpeg工具<br><span class="hljs-bullet">- </span>mp3steno：mp3工具<br><span class="hljs-bullet">- </span>namo gif animator：gif工具<br><span class="hljs-bullet">- </span>openhashtab：hash工具<br><span class="hljs-bullet">- </span>outguess：图片工具<br><span class="hljs-bullet">- </span>pixrecovery：<br><span class="hljs-bullet">- </span>pngcheck：png工具<br><span class="hljs-bullet">- </span>qr_research：二维码工具<br><span class="hljs-bullet">- </span>stegdetect：<br><span class="hljs-bullet">- </span>steghide：捆绑工具<br><span class="hljs-bullet">- </span>stegsolve：分离工具<br><span class="hljs-bullet">- </span>tweakpng：png工具<br><span class="hljs-bullet">- </span>wbstego：<br><span class="hljs-bullet">- </span>ctf 密码学知识点总结<br><span class="hljs-bullet">- </span>ctf 逆向知识点总结<br><span class="hljs-bullet">- </span>ctf 隐写术知识点总结<br></code></pre></td></tr></table></figure>
+<h3 id="TrafficTools-流量工具"><a href="#TrafficTools-流量工具" class="headerlink" title="[+] TrafficTools 流量工具:"></a><strong><code>[+] TrafficTools 流量工具:</code></strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs COPY">- burpsuite: <br>  * burpsuite 2022.1.1汉化版（https://github.com/funkyoummp/burpsuitecn）<br>  * 集成插件：<br>    - vulners scanner<br>    - changeu<br>    - chunked coding converter<br>    - domain hunter<br>    - fake ip<br>    - hackbar<br>    - sqlmap4burp<br>    - turbo intruder<br>- fiddler: 流量抓包工具（汉化版）<br>- ftpservers: ftp开启工具  <br>- hack firefox: firefox 49.0 （集成插件版）<br>- ipchanger: ip代理工具  <br>- phpstudy: 集成环境 <br>  * 集成thinkphp3.1.3 — 5.0.24全部版本<br>- proxifier: 流量代理工具  <br>- shadowsocks: socks代理工具 <br>- torbrowser: 洋葱浏览器<br>- wireshark: 流量抓包分析工具<br></code></pre></td></tr></table></figure>
+<h1 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a><strong><code>下载链接</code></strong></h1><p>链接：<a target="_blank" rel="noopener" href="https://pan.xunlei.com/s/VN0C7m2p1mbLDPPu0j_UwRsVA1">https://pan.xunlei.com/s/VN0C7m2p1mbLDPPu0j_UwRsVA1</a> 提取码：ehpm</p>
+<p>注：转载于 <a target="_blank" rel="noopener" href="https://github.com/makoto56/penetration-suite-toolkit">https://github.com/makoto56/penetration-suite-toolkit</a></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%B7%A5%E5%85%B7/" class="category-chain-item">工具</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%B7%A5%E5%85%B7/">#工具</a>
+      
+        <a href="/tags/%E7%B3%BB%E7%BB%9F/">#系统</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>系统镜像工具</div>
+      <div>http://47.108.137.21/2022/08/18/系统镜像工具/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>冬至</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年8月18日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2022年8月18日</div>
+        </div>
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/08/18/%E5%86%85%E7%BD%91%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="内网信息收集常用命令">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">内网信息收集常用命令</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/08/18/%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/" title="相关资源">
+                        <span class="hidden-mobile">相关资源</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.4.17/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"9kGDSQDkxkE3TSzEqNu8npXL-gzGzoHsz","appKey":"qAU3k52ypzcEAq3dp5vRD6d8","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+<i class="iconfont icon-love"></i>
+<a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
+<div style="font-size: 0.85rem">
+  <span id="website-duration">载入网站运行时间...</span>
+  <script src="/js/duration.js"></script>
+</div>    
+
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      京ICP证123456号
+    </a>
+  </span>
+  
+    
+      <span>
+        <a
+          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=12345678"
+          rel="nofollow noopener"
+          class="beian-police"
+          target="_blank"
+        >
+          
+            <span style="visibility: hidden; width: 0">|</span>
+            <img src="/img/police_beian.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+          
+          <span>京公网安备12345678号</span>
+        </a>
+      </span>
+    
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/star.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
+<!--单击显示文字-->
+<script type="text/javascript" src="/js/click_show_text.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
+<!-- 雪花特效 -->
+<script type="text/javascript" src="\js\snow.js"></script>
