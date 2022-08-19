@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>hexo常用命令</title>
+    <link href="/2022/08/19/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <url>/2022/08/19/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    
+    <content type="html"><![CDATA[<h1 id="个人博客建设——Hexo常用命令汇总"><a href="#个人博客建设——Hexo常用命令汇总" class="headerlink" title="个人博客建设——Hexo常用命令汇总"></a>个人博客建设——<a href="https://so.csdn.net/so/search?q=Hexo&amp;spm=1001.2101.3001.7020">Hexo</a>常用命令汇总</h1><p>正文<br>本篇是对于Hexo日常使用的命令进行汇总，便于查阅使用。</p><p>命令    简写    描述<br>npm install hexo -g        初次建站<br>npm update hexo -g        升级hexo<br>hexo init        初始化<br>npm install hexo-xxxx —save        安装插件<br>npm uninstall hexo-xxx —save        卸载插件<br>hexo n “文章名”    新建文章(日常在source/_drafts目录下创建文件是草稿，source/_posts目录下创建文件是发布的文章)，题包含空格时必须使用引号<br>hexo clean        清除缓存<br>hexo generate    hexo g    生成静态文件(public文件夹内容生成)<br>hexo deploy    hexo d    部署<br>hexo d -g    生成静态文件并部署<br>hexo server    hexo s    预览,启动服务器<br>hexo s -p 端口号    重置端口号<br>hexo s -l    日志<br>hexo s -i IP地址    自定义IP<br>hexo s -s    使用静态文件启动<br>由于我使用的是Typora进行编辑日常文件，使用Markdown语法进行编写文章内容，因此hexo的其他命令使用场景并不多，如后续有其他的常用的命令再进行补充。</p><p>文章参考<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fhexo.io%2Fzh-cn%2Fdocs%2F">https://links.jianshu.com/go?to=https%3A%2F%2Fhexo.io%2Fzh-cn%2Fdocs%2F</a><br>————————————————<br>版权声明：本文为CSDN博主「CN華少」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/csde12/article/details/120388975">https://blog.csdn.net/csde12/article/details/120388975</a></p><h1 id="关于在typora插入图片博客不显示的问题"><a href="#关于在typora插入图片博客不显示的问题" class="headerlink" title="关于在typora插入图片博客不显示的问题"></a>关于在typora插入图片博客不显示的问题</h1><p>卸载原有插件</p><p>yarn remove hexo-asset-image</p><p>下载一下插件</p><p>yarn add  <a href="https://github.com/CodeFalling/hexo-asset-image">https://github.com/CodeFalling/hexo-asset-image</a></p><p>就可以了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>命令</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>内网信息收集常用命令</title>
     <link href="/2022/08/18/%E5%86%85%E7%BD%91%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <url>/2022/08/18/%E5%86%85%E7%BD%91%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
