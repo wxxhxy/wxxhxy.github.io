@@ -16,16 +16,16 @@
   <meta name="author" content="冬至">
   <meta name="keywords" content="">
   
-    <meta name="description" content="一.vi编辑器1.命令模式：只能输入命令 2.编辑模式（插入模式）：修改文本  按i键进入 3.底行模式：结束操作 按ESC键 输入：wq! 保存退出 二.centos静态ip配置说明： 在安装好CentOS虚拟机以后，一般我们会通过Xshell连接到虚拟机，而不是直接使用虚拟机里面的终端（Terminal）输入命令。 如果使用默认的动态分配IP，虚拟机每次开机以后IP都会改变，Xshell连接需">
+    <meta name="description" content="配置CentOS一.vi编辑器1.命令模式：只能输入命令 2.编辑模式（插入模式）：修改文本  按i键进入 3.底行模式：结束操作 按ESC键 输入：wq! 保存退出 二.centos静态ip配置说明： 不是必须配置，看自己情况而定。 在安装好CentOS虚拟机以后，一般我们会通过Xshell连接到虚拟机，而不是直接使用虚拟机里面的终端（Terminal）输入命令。 如果使用默认的动态分配IP，虚">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux系统学习一">
 <meta property="og:url" content="http://47.108.137.21/2022/08/20/Linux%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E4%B8%80/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="一.vi编辑器1.命令模式：只能输入命令 2.编辑模式（插入模式）：修改文本  按i键进入 3.底行模式：结束操作 按ESC键 输入：wq! 保存退出 二.centos静态ip配置说明： 在安装好CentOS虚拟机以后，一般我们会通过Xshell连接到虚拟机，而不是直接使用虚拟机里面的终端（Terminal）输入命令。 如果使用默认的动态分配IP，虚拟机每次开机以后IP都会改变，Xshell连接需">
+<meta property="og:description" content="配置CentOS一.vi编辑器1.命令模式：只能输入命令 2.编辑模式（插入模式）：修改文本  按i键进入 3.底行模式：结束操作 按ESC键 输入：wq! 保存退出 二.centos静态ip配置说明： 不是必须配置，看自己情况而定。 在安装好CentOS虚拟机以后，一般我们会通过Xshell连接到虚拟机，而不是直接使用虚拟机里面的终端（Terminal）输入命令。 如果使用默认的动态分配IP，虚">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://47.108.137.21/img/wallhaven-od3555.jpg">
 <meta property="article:published_time" content="2022-08-20T13:03:25.000Z">
-<meta property="article:modified_time" content="2022-08-27T10:34:17.322Z">
+<meta property="article:modified_time" content="2022-08-27T13:00:21.042Z">
 <meta property="article:author" content="冬至">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://47.108.137.21/img/wallhaven-od3555.jpg">
@@ -272,7 +272,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.1k 字
+          5.4k 字
         
       </span>
     
@@ -283,7 +283,7 @@
         
         
         
-          26 分钟
+          45 分钟
         
       </span>
     
@@ -338,7 +338,7 @@
               <p class="note note-primary">
                 
                   
-                    本文最后更新于：2 分钟前
+                    本文最后更新于：1 分钟前
                   
                 
               </p>
@@ -346,21 +346,22 @@
             
               <div class="markdown-body">
                 
-                <h1 id="一-vi编辑器"><a href="#一-vi编辑器" class="headerlink" title="一.vi编辑器"></a>一.vi编辑器</h1><p>1.命令模式：只能输入命令</p>
+                <h1 id="配置CentOS"><a href="#配置CentOS" class="headerlink" title="配置CentOS"></a>配置CentOS</h1><h1 id="一-vi编辑器"><a href="#一-vi编辑器" class="headerlink" title="一.vi编辑器"></a>一.vi编辑器</h1><p>1.命令模式：只能输入命令</p>
 <p>2.编辑模式（插入模式）：修改文本  按i键进入</p>
 <p>3.底行模式：结束操作 按ESC键 输入：wq! 保存退出</p>
 <h1 id="二-centos静态ip配置"><a href="#二-centos静态ip配置" class="headerlink" title="二.centos静态ip配置"></a>二.centos静态ip配置</h1><p>说明：</p>
+<p>不是必须配置，看自己情况而定。</p>
 <p>在安装好CentOS虚拟机以后，一般我们会通过Xshell连接到虚拟机，而不是直接使用虚拟机里面的终端（Terminal）输入命令。</p>
 <p>如果使用默认的动态分配IP，虚拟机每次开机以后IP都会改变，Xshell连接需要修改IP。所以这里我们需要将IP设置成静态IP，只要虚拟机开机即可连接。</p>
 <p>问题：如果网络环境发生变化，比如从有线变成无线，或者电脑从办公室移动到家里，主机IP（网段）发生了变化，需要重新设置虚拟机的静态IP吗？答案是不需要，不影响物理机与虚拟机的连接。</p>
-<h2 id="一、查看物理机IP"><a href="#一、查看物理机IP" class="headerlink" title="一、查看物理机IP"></a>一、查看物理机IP</h2><p>打开cmd，输入ipconfig -all</p>
+<h2 id="1、查看物理机IP"><a href="#1、查看物理机IP" class="headerlink" title="1、查看物理机IP"></a>1、查看物理机IP</h2><p>打开cmd，输入ipconfig -all</p>
 <p>如果你的电脑用的是有线网络，就找到“以太网”的IPv4地址：</p>
 <p><img src="/2022/08/20/Linux%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E4%B8%80/图片1.png" srcset="/img/loading.gif" lazyload alt></p>
 <p>比如192.168.3.10（下面会用到）</p>
 <p>如果是无线网络（WiFi），则找到WLAN的IPv4地址：</p>
 <p><img src="/2022/08/20/Linux%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E4%B8%80/图片2.png" srcset="/img/loading.gif" lazyload alt></p>
 <p>比如192.168.10.142（下面会用到）</p>
-<h2 id="二、虚拟机网络设置"><a href="#二、虚拟机网络设置" class="headerlink" title="二、虚拟机网络设置"></a>二、虚拟机网络设置</h2><p>首先是网络模式，点击虚拟机，编辑虚拟机设置：</p>
+<h2 id="2、虚拟机网络设置"><a href="#2、虚拟机网络设置" class="headerlink" title="2、虚拟机网络设置"></a>2、虚拟机网络设置</h2><p>首先是网络模式，点击虚拟机，编辑虚拟机设置：</p>
 <p><img src="/2022/08/20/Linux%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E4%B8%80/图片3.png" srcset="/img/loading.gif" lazyload alt></p>
 <p>网络适配器，网络连接需要选择：自定义——VMnet8（NAT模式），保存。</p>
 <p><img src="/2022/08/20/Linux%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E4%B8%80/图片4.png" srcset="/img/loading.gif" lazyload alt></p>
@@ -379,7 +380,7 @@
 <p>如果改了以后网络不通，可以点左下角的“还原默认设置”，再修改。</p>
 <p><img src="/2022/08/20/Linux%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E4%B8%80/图片9.png" srcset="/img/loading.gif" lazyload alt></p>
 <p>虚拟机的网络设置好以后，下面是网络配置文件。</p>
-<h2 id="三、CentOS网络配置文件"><a href="#三、CentOS网络配置文件" class="headerlink" title="三、CentOS网络配置文件"></a>三、CentOS网络配置文件</h2><p>启动虚拟机，以root用户登录（必须是root用户，否则没权限修改配置文件）。</p>
+<h2 id="3、CentOS网络配置文件"><a href="#3、CentOS网络配置文件" class="headerlink" title="3、CentOS网络配置文件"></a>3、CentOS网络配置文件</h2><p>启动虚拟机，以root用户登录（必须是root用户，否则没权限修改配置文件）。</p>
 <p>Applications——System Tools找到Terminal（终端）<img src="/2022/08/20/Linux%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E4%B8%80/图片10.png" srcset="/img/loading.gif" lazyload alt></p>
 <p>如果之前用过的话在Favorites里面：</p>
 <p><img src="/2022/08/20/Linux%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E4%B8%80/图片11.png" srcset="/img/loading.gif" lazyload alt></p>
@@ -436,7 +437,7 @@
 <p>解决办法很简单：</p>
 <p>按E或Enter继续编辑。删掉这个临时文件，下次就没有提示了：</p>
 <p>rm /etc/sysconfig/network-scripts/.ifcfg-ens33.swp</p>
-<h2 id="四、Xshell连接CentOS"><a href="#四、Xshell连接CentOS" class="headerlink" title="四、Xshell连接CentOS"></a>四、Xshell连接CentOS</h2><p>在前面两步网络验证（物理机可以连虚拟机、虚拟机可以访问互联网）没有问题之后，就可以用Xshell连接CentOS了。</p>
+<h2 id="4、Xshell连接CentOS"><a href="#4、Xshell连接CentOS" class="headerlink" title="4、Xshell连接CentOS"></a>4、Xshell连接CentOS</h2><p>在前面两步网络验证（物理机可以连虚拟机、虚拟机可以访问互联网）没有问题之后，就可以用Xshell连接CentOS了。</p>
 <p>从这里面下载Xshell：</p>
 <p>note.youdao.com/noteshare?id=803aca595a26966fc1c4853ad08455e3</p>
 <p>把“Xshell_v7.0.0076.7z”解压出来，在“绿化处理.bat”上，右键管理员运行</p>
@@ -483,7 +484,272 @@
 <p><img src="/2022/08/20/Linux%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E4%B8%80/图片31.png" srcset="/img/loading.gif" lazyload alt></p>
 <p><strong>原因七</strong></p>
 <p>如果还是解决不了，删掉虚拟机重新安装试试</p>
-
+<h1 id="三-CentOS替换yum源为阿里云"><a href="#三-CentOS替换yum源为阿里云" class="headerlink" title="三.CentOS替换yum源为阿里云"></a>三.CentOS替换yum源为阿里云</h1><p>首先需要安装好CentOS，并且配置好静态IP，参考上面。</p>
+<p>yum是CentOS中的一种软件管理器，通过yum安装软件，可以自动解决包依赖的问题，免去手工安装依赖包的麻烦。</p>
+<p>yum使用了一个中心仓库来记录和管理软件的依赖关系，默认为mirrorlist.centos.org，叫做CentOS官方yum源。</p>
+<p>这个仓库可以类比为手机的应用市场，应用市场也有很多，比如华为应用市场、小米应用市场、应用宝等等。</p>
+<p>很多同学在CentOS中使用yum安装软件的时候，会提示</p>
+<p>Could not resolve host:mirrorlist.centos.org: Unkown error的问题，如图：</p>
+<p><img src="/2022/08/20/Linux%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E4%B8%80/图片32.png" srcset="/img/loading.gif" lazyload alt></p>
+<p>根本原因是连接国外的网站（CentOS官方yum源）不稳定。</p>
+<p>解决这个问题的办法就是把官方的yum源替换为国内的yum源，这些服务器是官方源的镜像，也就是所有的软件都同步到了国内的服务器上，比如阿里云源、清华源、网易源、中科大源等等。</p>
+<p>这里我们推荐使用阿里云的yum源。</p>
+<p>注：从物理机粘贴文字内容到虚拟机终端的快捷键是Shift+Insert</p>
+<h2 id="1、备份官方yum源配置文件"><a href="#1、备份官方yum源配置文件" class="headerlink" title="1、备份官方yum源配置文件"></a>1、备份官方yum源配置文件</h2><p>官方yum源配置文件在：</p>
+<p>/etc/yum.repos.d/CentOS-Base.repo</p>
+<p>里面的内容：</p>
+<p>cat /etc/yum.repos.d/CentOS-Base.repo</p>
+<p><img src="/2022/08/20/Linux%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E4%B8%80/图片33.png" srcset="/img/loading.gif" lazyload alt></p>
+<p>备份命令：</p>
+<p>cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak</p>
+<h2 id="2、下载阿里云源配置，覆盖原文件"><a href="#2、下载阿里云源配置，覆盖原文件" class="headerlink" title="2、下载阿里云源配置，覆盖原文件"></a>2、下载阿里云源配置，覆盖原文件</h2><p>命令：</p>
+<p>curl -o /etc/yum.repos.d/CentOS-Base.repo <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/repo/Centos-7.repo">http://mirrors.aliyun.com/repo/Centos-7.repo</a></p>
+<p>再次查看内容：</p>
+<p>cat /etc/yum.repos.d/CentOS-Base.repo</p>
+<p><img src="/2022/08/20/Linux%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E4%B8%80/图片34.png" srcset="/img/loading.gif" lazyload alt></p>
+<h2 id="3、清理缓存并生成新的缓存"><a href="#3、清理缓存并生成新的缓存" class="headerlink" title="3、清理缓存并生成新的缓存"></a>3、清理缓存并生成新的缓存</h2><p>命令：</p>
+<p>yum clean all</p>
+<p>yum makecache</p>
+<p>如果出现”Failed connect to mirrors.aliyuncs.com:80; Connection refused”的错误，重试即可。</p>
+<h2 id="4、更新软件"><a href="#4、更新软件" class="headerlink" title="4、更新软件"></a>4、更新软件</h2><p>注意：这一步会更新操作系统中所有软件到最新版，不是必要操作。而且网速慢的情况下，会非常耗时，谨慎操作。</p>
+<p>命令：</p>
+<p>sudo yum -y update</p>
+<p>如果要中断，就按Ctrl+C。</p>
+<h1 id="Linux操作系统基础知识"><a href="#Linux操作系统基础知识" class="headerlink" title="Linux操作系统基础知识"></a>Linux操作系统基础知识</h1><h1 id="一-Linux系统结构"><a href="#一-Linux系统结构" class="headerlink" title="一.Linux系统结构"></a>一.Linux系统结构</h1><h2 id="1、内核-："><a href="#1、内核-：" class="headerlink" title="1、内核 ："></a>1、内核 ：</h2><p>1、管理进程 2、管理内存 3、管理驱动  4、管理文件和网络</p>
+<h2 id="2、Shell-："><a href="#2、Shell-：" class="headerlink" title="2、Shell ："></a>2、Shell ：</h2><p>接收用户的命令，经过转换，交给内核去执行<br> cat   —&gt; open() read() </p>
+<p>1、简化操作    </p>
+<p>2、安全</p>
+<h3 id="Linux-Shell工具"><a href="#Linux-Shell工具" class="headerlink" title="Linux Shell工具"></a>Linux Shell工具</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>程序路径</th>
+<th>作者</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bourne Shell</td>
+<td>/usr/bin/sh或/bin/sh</td>
+<td>Stephen Bourne</td>
+</tr>
+<tr>
+<td>C Shell</td>
+<td>/usr/bin/csh</td>
+<td>Bill Joy</td>
+</tr>
+<tr>
+<td>K Shell</td>
+<td>/usr/bin/ksh</td>
+<td>David Korn</td>
+</tr>
+<tr>
+<td>Bourne Again Shell</td>
+<td>/bin/bash</td>
+<td>Brian Fox</td>
+</tr>
+<tr>
+<td>Z Shell</td>
+<td>/bin/zsh或/usr/bin/zsh</td>
+<td>Paul Falstad</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Windows：cmd、Power Shell</p>
+<h2 id="3、文件系统"><a href="#3、文件系统" class="headerlink" title="3、文件系统"></a>3、文件系统</h2><h3 id="Linux文件系统"><a href="#Linux文件系统" class="headerlink" title="Linux文件系统"></a>Linux文件系统</h3><p><strong>“一切皆文件”</strong><br>普通文件、目录、进程（/proc）、输入输出设备（/dev）、网络字节流socket、链接文件、管道文件</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>查看文件</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lsof /bin/bash</td>
+<td>查找某个文件相关的进程</td>
+</tr>
+<tr>
+<td>lsof -u root</td>
+<td>列出某个用户打开的文件信息</td>
+</tr>
+<tr>
+<td>lsof -c redis</td>
+<td>列出某个程序进程所打开的文件信息</td>
+</tr>
+<tr>
+<td>lsof -i tcp</td>
+<td>列出所有tcp 网络连接信息</td>
+</tr>
+<tr>
+<td>……</td>
+<td>……</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="Linux目录"><a href="#Linux目录" class="headerlink" title="Linux目录"></a>Linux目录</h3><p><img src="/2022/08/20/Linux%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E4%B8%80/image-20220827204945761.png" srcset="/img/loading.gif" lazyload alt></p>
+<p><img src="/2022/08/20/Linux%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E4%B8%80/image-20220827205025092.png" srcset="/img/loading.gif" lazyload alt></p>
+<h3 id="根目录文件-1"><a href="#根目录文件-1" class="headerlink" title="根目录文件-1"></a>根目录文件-1</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>目录</th>
+<th>作用</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bin</td>
+<td>存放普通用户可执行的指令</td>
+<td>即使在单用户模式下也能够执行处理</td>
+</tr>
+<tr>
+<td>boot</td>
+<td>开机引导目录</td>
+<td>包括Linux内核文件与开机所需要的文件</td>
+</tr>
+<tr>
+<td>dev</td>
+<td>设备目录</td>
+<td>所有的硬件设备及周边均放置在这个设备目录中，比如声卡、磁盘</td>
+</tr>
+<tr>
+<td>etc</td>
+<td>各种配置文件目录</td>
+<td>大部分配置属性均存放在这里</td>
+</tr>
+<tr>
+<td>lib</td>
+<td>库文件存放地，bin和sbin需要的库文件</td>
+<td>类似windows的DLL</td>
+</tr>
+<tr>
+<td>media</td>
+<td>可移除设备挂载目录</td>
+<td>类似U盘、光盘、移动硬盘等临时挂放目录</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>mnt</th>
+<th>用户临时挂载其他的文件系统</th>
+<th>额外的设备可挂载在这里,相对临时而言</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>opt</td>
+<td>第三方软件安装目录</td>
+<td>现在习惯性的放置在/usr/local中</td>
+</tr>
+<tr>
+<td>proc</td>
+<td>虚拟文件系统</td>
+<td>通常是内存中的映射,特别注意在误删除数据文件后，比如DB，只要系统不重启,还是有很大几率能将数据找回来</td>
+</tr>
+<tr>
+<td>root</td>
+<td>系统管理员主目录</td>
+<td>除root之外,其他用户均放置在/home目录下</td>
+</tr>
+<tr>
+<td>run</td>
+<td>系统运行时所需文件</td>
+<td>以前防止在/var/run中,后来拆分成独立的/run目录。重启后重新生成对应的目录数据</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>sbin</th>
+<th>只有root才能运行的管理指令</th>
+<th>跟bin类似,但只属于root管理员</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>srv</td>
+<td>服务启动后需要访问的数据目录</td>
+<td></td>
+</tr>
+<tr>
+<td>sys</td>
+<td>跟proc一样，虚拟文件系统</td>
+<td>记录核心系统硬件信息</td>
+</tr>
+<tr>
+<td>tmp</td>
+<td>存放临时文件目录</td>
+<td>所有用户对该目录均可读写</td>
+</tr>
+<tr>
+<td>usr</td>
+<td>应用程序放置目录</td>
+<td></td>
+</tr>
+<tr>
+<td>var</td>
+<td>存放系统执行过程经常改变的文件</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="用户主目录"><a href="#用户主目录" class="headerlink" title="用户主目录"></a>用户主目录</h3><p>主目录：home directory<br>    root用户的主目录是 /root<br>    其他用户的主目录是 /home/用户名</p>
+<p>cd 空格 或者 cd ~</p>
+<p>工作目录：working directory</p>
+<h3 id="目录指代"><a href="#目录指代" class="headerlink" title="目录指代"></a>目录指代</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>指代</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>绝对路径</td>
+<td>由根目录 / 开始写起</td>
+</tr>
+<tr>
+<td>相对路径</td>
+<td>从当前所在的工作目录开始写起</td>
+</tr>
+<tr>
+<td>/</td>
+<td>根目录</td>
+</tr>
+<tr>
+<td>.</td>
+<td>代表当前目录</td>
+</tr>
+<tr>
+<td>~</td>
+<td>代表用户工作目录，vim ~/.bashrc</td>
+</tr>
+<tr>
+<td>../</td>
+<td>代表上一级目录</td>
+</tr>
+<tr>
+<td>../../</td>
+<td>上上一级目录，以此类推，超出范围的时候代表根目录</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="4、应用程序"><a href="#4、应用程序" class="headerlink" title="4、应用程序"></a>4、应用程序</h2>
                 
               </div>
             
